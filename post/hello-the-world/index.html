@@ -15,6 +15,12 @@
 <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
 
 
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -92,6 +98,12 @@
       </div>
 
       
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
 
       <div class="site-footer">
   <div class="slogan">温故而知新</div>
@@ -112,6 +124,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '071fa5a9793482b3b5ba',
+        clientSecret: '7c2eab21958a61963e8d4400a1cb8fa4db2952f6',
+        repo: 'smartchaos.github.io',
+        owner: 'smartchaos',
+        admin: ['smartchaos'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
