@@ -92,19 +92,16 @@
 <h2 id="解题思路">解题思路</h2><ol>
 <li>容易想到的是双层循环, 时间复杂度O(n^2)。需要关注的是题目提示只有一个答案，并且暗示不该出现自己和自己相加的情形（影响到边界处理条件）。代码如下：<pre><code class="language-java">public int[] twoSum(int[] nums, int target) {
      int j = nums.length - 1;
-     int[] res = {0, 0};
      do {
          int i = 0;
          while (i &lt; j) {
              if (nums[i] + nums[j] == target) {
-                 res[0] = i;
-                 res[1] = j;
-                 return res;
+                 return  new int[]{i, j};
              }
              i++;
          }
      } while (--j &gt; 0);
-     return res;
+     new IllegalArgumentException(&quot;No two sum solution&quot;);
  }</code></pre>
 <blockquote>
 <p>Runtime: 20 ms, faster than 41.25% of Java online submissions for Two Sum.<br>Memory Usage: 38.5 MB, less than 45.94% of Java online submissions for Two Sum.</p>
