@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>leetcode探险记-003 | Smart Chaos Notes</title>
+<meta name="description" content="沉舟侧畔千帆过，病树前头万木春">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico">
+<link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://smartchaos.github.io/">
+        <img class="avatar" src="https://smartchaos.github.io//images/avatar.png" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://smartchaos.github.io/">
+        <h1 class="site-title">Smart Chaos Notes</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+        
+          <a href="/projects" class="menu purple-link">
+            项目
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          <h2 class="post-title">leetcode探险记-003</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-03-05</span>
+            
+          </div>
+          <div class="post-content">
+            <h2 id="问题描述">问题描述</h2><p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">最大不重复子串问题</a></p>
+<h2 id="解题思路">解题思路</h2><ol>
+<li><p>思路一：借助Set判断是否有重复， 通过游标j巡回判断</p>
+<pre><code class="language-java"> public int lengthOfLongestSubstring(String s) {
+     if (s == null || s.length() == 0) {
+         return 0;
+     }
+     int startIndex = 0;
+     int endIndex = 0;
+     Set&lt;Character&gt; set = new HashSet&lt;&gt;();
+
+     int length = s.length();
+     for (int i = 0; i &lt; length; i++) {
+         set.add(s.charAt(i));
+         int j = i + 1;
+         while (j &lt; s.length() &amp;&amp; !set.contains(s.charAt(j))) {
+             set.add(s.charAt(j));
+             if (j - i &gt; endIndex - startIndex) {
+                 startIndex = i;
+                 endIndex = j;
+             }
+             j++;
+         }
+         set.clear();
+     }
+     return endIndex - startIndex + 1;
+ }</code></pre>
+<p>结果实际上很不理想, 时间复杂度处于后1/3, 内存占用更没法看了。内存占用这点实际上是在预期之内的</p>
+<blockquote>
+<p>Runtime: 61 ms, faster than 22.26% of Java online submissions for Longest Substring Without Repeating Characters.<br>Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest Substring Without Repeating Characters.</p>
+</blockquote>
+</li>
+<li><p>思路二，既然是求最长，那么是否可以考虑从两端向中间靠拢</p>
+</li>
+</ol>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://smartchaos.github.io//post/leetcode-li-xian-ji-002">
+              <h3 class="post-title">
+                下一篇：leetcode历险记-002
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">沉舟侧畔千帆过，病树前头万木春</div>
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '071fa5a9793482b3b5ba',
+        clientSecret: '7c2eab21958a61963e8d4400a1cb8fa4db2952f6',
+        repo: 'smartchaos.github.io',
+        owner: 'smartchaos',
+        admin: ['smartchaos'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
