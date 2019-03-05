@@ -127,6 +127,21 @@
 <p>Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.<br>Memory Usage: 38.3 MB, less than 63.08% of Java online submissions for Two Sum.</p>
 </blockquote>
 </li>
+<li>看了官方的solution集，发现还有更加紧凑的解法，只需要一次循环。思路是边循环边设置并检查map，如果加和等于target则终止，最坏情况是第一个元素和最后一个元素匹配。<pre><code class="language-java">public int[] twoSum(int[] nums, int target) {
+     Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;(nums.length);
+     for (int i = 0; i &lt; nums.length; i++) {
+         int complement = target - nums[i];
+         if (map.containsKey(complement)) {
+             return new int[]{map.get(complement), i};
+         }
+         map.put(nums[i], i);
+     }
+     throw new IllegalArgumentException(&quot;No two sum solution&quot;);
+ }</code></pre>
+<blockquote>
+<p>Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.<br>Memory Usage: 39.2 MB, less than 21.98% of Java online submissions for Two Sum.<br>有意思的是，空间复杂度不如方案二，时间复杂度基本一致，会是什么原因呢？</p>
+</blockquote>
+</li>
 </ol>
 
           </div>
