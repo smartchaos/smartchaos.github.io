@@ -88,26 +88,46 @@
             
           </div>
           <div class="post-content">
-            <p><a href="https://leetcode.com/problems/two-sum/">两数相加等于目标值</a><br>解法1：双层循环, 时间复杂度O(n^2)</p>
-<pre><code class="language-java">public int[] twoSum(int[] nums, int target) {
-        int j = nums.length - 1;
-        int[] res = {0, 0};
-        do {
-            int i = 0;
-            while (i &lt; j) {
-                if (nums[i] + nums[j] == target) {
-                    res[0] = i;
-                    res[1] = j;
-                    return res;
-                }
-                i++;
-            }
-        } while (--j &gt; 0);
-        return res;
-    }</code></pre>
+            <h2 id="问题：">问题：</h2><p><a href="https://leetcode.com/problems/two-sum/">两数相加等于目标值</a></p>
+<h2 id="解题思路">解题思路</h2><ol>
+<li>容易想到的是双层循环, 时间复杂度O(n^2)。需要关注的是题目提示只有一个答案，并且暗示不该出现自己和自己相加的情形（影响到边界处理条件）。代码如下：<pre><code class="language-java">public int[] twoSum(int[] nums, int target) {
+     int j = nums.length - 1;
+     int[] res = {0, 0};
+     do {
+         int i = 0;
+         while (i &lt; j) {
+             if (nums[i] + nums[j] == target) {
+                 res[0] = i;
+                 res[1] = j;
+                 return res;
+             }
+             i++;
+         }
+     } while (--j &gt; 0);
+     return res;
+ }</code></pre>
 <blockquote>
 <p>Runtime: 20 ms, faster than 41.25% of Java online submissions for Two Sum.<br>Memory Usage: 38.5 MB, less than 45.94% of Java online submissions for Two Sum.</p>
 </blockquote>
+</li>
+<li>容易想到的还有先用target与数组里的值做差，再借助Map这种数据结构遍历。时间复杂度变为O(n)<pre><code class="language-java">public int[] twoSum(int[] nums, int target) {
+      Map&lt;Integer, Integer&gt; diffMap = new HashMap&lt;&gt;();
+     for (int i = 0; i &lt; nums.length; i++) {
+         diffMap.put(target - nums[i], i);
+     }
+     for (int i = 0; i &lt; nums.length; i++) {
+         Integer oriIndex = diffMap.get(nums[i]);
+         if (oriIndex != null &amp;&amp; i != oriIndex) {
+             return new int[]{i, oriIndex};
+         }
+     }
+     return new int[2];
+ }</code></pre>
+<blockquote>
+<p>Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.<br>Memory Usage: 38.9 MB, less than 32.47% of Java online submissions for Two Sum.</p>
+</blockquote>
+</li>
+</ol>
 
           </div>
         </div>
