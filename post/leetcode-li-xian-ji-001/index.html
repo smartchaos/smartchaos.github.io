@@ -110,8 +110,8 @@
 <p>Runtime: 20 ms, faster than 41.25% of Java online submissions for Two Sum.<br>Memory Usage: 38.5 MB, less than 45.94% of Java online submissions for Two Sum.</p>
 </blockquote>
 </li>
-<li>容易想到的还有先用target与数组里的值做差，再借助Map这种数据结构遍历。时间复杂度变为O(n)<pre><code class="language-java">public int[] twoSum(int[] nums, int target) {
-      Map&lt;Integer, Integer&gt; diffMap = new HashMap&lt;&gt;(nums.length);
+<li>容易想到的还有先用target与数组里的值做差，再借助Map这种数据结构, 遍历原数组寻找“配对”值下标。时间复杂度变为O(n)<pre><code class="language-java">public int[] twoSum(int[] nums, int target) {
+     Map&lt;Integer, Integer&gt; diffMap = new HashMap&lt;&gt;(nums.length);
      for (int i = 0; i &lt; nums.length; i++) {
          diffMap.put(target - nums[i], i);
      }
