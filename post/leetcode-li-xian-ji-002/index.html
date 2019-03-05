@@ -105,7 +105,35 @@
 <p>Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.<br>Memory Usage: 48.2 MB, less than 17.15% of Java online submissions for Add Two Numbers.</p>
 </blockquote>
 <p>从结果来看广大网友似乎更多是在节省空间复杂度上下了功夫。</p>
-<h3 id="改进思路，是不是可以利用l1或者l2保存结果以节省空间呢？">改进思路，是不是可以利用L1或者L2保存结果以节省空间呢？</h3>
+<h3 id="改进思路，">改进思路，</h3><p>是不是可以利用L1或者L2保存结果以节省空间呢？也就是以常见的merge链表的思路去做</p>
+<pre><code class="language-java">public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        int carryFlag = 0, plusHolder;
+        ListNode prevPos = l1;
+        ListNode headPos = l1;
+        while (true) {
+            plusHolder = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + carryFlag;
+            carryFlag = plusHolder / 10;
+            if (l1 == null) {
+                ListNode newNode = new ListNode(carryFlag == 0 ? plusHolder : (plusHolder - 10));
+                prevPos.next = newNode;
+                l1 = prevPos.next;
+            } else {
+                l1.val = carryFlag == 0 ? plusHolder : (plusHolder - 10);
+            }
+            prevPos = l1;
+            l1 = l1.next;
+            if (l2 != null)
+                l2 = l2.next;
+            if (l1 == null &amp;&amp; l2 == null &amp;&amp; carryFlag != 1) {
+                return headPos;
+            }
+        }
+    }</code></pre>
+<p>结果在执行时间和空间占用上面都有所优化：</p>
+<blockquote>
+<p>Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.<br>Memory Usage: 47.8 MB, less than 41.60% of Java online submissions for Add Two Numbers.</p>
+</blockquote>
+
             </div>
           </article>
         </div>
