@@ -129,10 +129,12 @@
             countIndex++;
         }
     }</code></pre>
-<pre><code>    这里需要说明的是midPrev记录前值，current记录当前值，总长是偶数长度的只需要关注current即可，否则需要用于加和求中间值，也就是` return oddFlag ? current : (midPrev + current) / 2.0`</code></pre><blockquote>
+<p>这里需要说明的是midPrev记录前值，current记录当前值，总长是偶数长度的只需要关注current即可，否则需要用于加和求中间值，也就是<code>return oddFlag ? current : (midPrev + current) / 2.0</code></p>
+<blockquote>
 <p>Runtime: 24 ms, faster than 94.52% of Java online submissions for Median of Two Sorted Arrays.<br>Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of Two Sorted Arrays.    </p>
 </blockquote>
-<h3 id="思路二 构造大数组，插入排序，小数组插入到大数组之中，然后直接利用数组random access特性，直接取到结果。预期空间复杂度都会高于方案一，因为需要新申请数组,。处理得好的话时间复杂度也许会好一些，插入过程中注意插入位置是不是在中间位置之后，如果是的话可以直接中断返回结果。代码略">思路二 构造大数组，插入排序，小数组插入到大数组之中，然后直接利用数组random access特性，直接取到结果。预期空间复杂度都会高于方案一，因为需要新申请数组,。处理得好的话时间复杂度也许会好一些，插入过程中注意插入位置是不是在中间位置之后，如果是的话可以直接中断返回结果。代码略</h3>
+<h3 id="思路二 构造大数组，插入排序思路">思路二 构造大数组，插入排序思路</h3><p>小数组插入到大数组之中，然后直接利用数组random access特性，直接取到结果。预期空间复杂度都会高于方案一，因为需要新申请数组,。处理得好的话时间复杂度也许会好一些，插入过程中注意插入位置是不是在中间位置之后，如果是的话可以直接中断返回结果。代码略</p>
+
           </div>
         </div>
 
