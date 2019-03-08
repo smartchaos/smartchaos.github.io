@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>leetcode刷题记-003 | Smart Chaos Notes</title>
+<title>leetcode刷题记-004 | Smart Chaos Notes</title>
 <meta name="description" content="沉舟侧畔千帆过，病树前头万木春">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -88,56 +88,59 @@
 
       <div class="content-container">
         <div class="post-detail">
-          <h2 class="post-title">leetcode刷题记-003</h2>
+          <h2 class="post-title">leetcode刷题记-004</h2>
           <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-03-05</span>
+            <span><i class="icon-calendar-outline"></i> 2019-03-08</span>
             
           </div>
           <div class="post-content">
-            <h2 id="问题描述">问题描述</h2><p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">最大不重复子串问题</a></p>
-<h2 id="解题思路">解题思路</h2><ol>
-<li><p>方案一：借助Set判断是否有重复， 通过游标j巡回判断， 实际上是一种暴力破解的思路</p>
-<pre><code class="language-java">public static int lengthOfLongestSubstring(String s) {
-     if (s.length() == 0) {
-         return 0;
-     }
-     int lengthOfRes = 0;
-     Set&lt;Character&gt; set = new HashSet&lt;&gt;();
+            <h2 id="问题">问题</h2><p><a href="">两个有序数组寻找中间值问题</a></p>
+<h2 id="解题思路">解题思路</h2><h3 id="思路一， 借鉴有序链表合并的思路">思路一， 借鉴有序链表合并的思路</h3><p>虽然leetcode标记为困难。但实际上很容易会想到“有序链表合并”的思路，在这个思路的基础之上记录下来中间值位置。对于中间值位置，由于在两个数组的长度之和是偶数的时候，需要取中间前后的两个数值计算中间值，所以需要记录前后两个值。附代码：</p>
+<pre><code class="language-java"> public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+         int totalLength = nums1.length + nums2.length;
+        boolean oddFlag = totalLength % 2 == 1;
+        final int middleVal = oddFlag ? totalLength / 2 + 1 : totalLength / 2 + 1;
 
-     int length = s.length();
-     for (int i = 0; i &lt; length; i++) {
-         set.add(s.charAt(i));
-         int j = i + 1;
-         while (j &lt; s.length() &amp;&amp; !set.contains(s.charAt(j))) {
-             set.add(s.charAt(j));
-             if (j - i &gt; lengthOfRes) {
-                 lengthOfRes = j - i;
-             }
-             j++;
-         }
-         set.clear();
-     }
-     return lengthOfRes + 1;
- }</code></pre>
-<p>结果实际上很不理想, 时间复杂度处于后1/3, 内存占用更没法看了。内存占用这点实际上是在预期之内的</p>
-<blockquote>
-<p>Runtime: 61 ms, faster than 22.26% of Java online submissions for Longest Substring Without Repeating Characters.<br>Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest Substring Without Repeating Characters.</p>
+        //navigate likes two linklist merging
+        int countIndex = 1, idx1 = 0, idx2 = 0;
+        int midPrev = 0, current = 0;
+
+        while (true) {
+            midPrev = current;
+            if (idx1 &lt; nums1.length &amp;&amp; idx2 &lt; nums2.length) {
+                if (nums1[idx1] &lt;= nums2[idx2]) {
+                    current = nums1[idx1];
+                    idx1++;
+                } else {
+                    current = nums2[idx2];
+                    idx2++;
+                }
+            } else if (idx1 &gt;= nums1.length) {
+                current = nums2[idx2];
+                idx2++;
+            } else {
+                current = nums1[idx1];
+                idx1++;
+            }
+
+            if (countIndex == middleVal) {
+                return oddFlag ? current : (midPrev + current) / 2.0;
+            }
+            countIndex++;
+        }
+    }</code></pre>
+<pre><code>    这里需要说明的是midPrev记录前值，current记录当前值，总长是偶数长度的只需要关注current即可，否则需要用于加和求中间值，也就是` return oddFlag ? current : (midPrev + current) / 2.0`</code></pre><blockquote>
+<p>Runtime: 24 ms, faster than 94.52% of Java online submissions for Median of Two Sorted Arrays.<br>Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of Two Sorted Arrays.    </p>
 </blockquote>
-</li>
-</ol>
-<p>反思下这个算法性能浪费在哪里了？对于已经具备的计算结果利用率不高可能是关键问题。例如abcdeabc这个case， abcde作为一个整体是没有重复字符的，接下来遇到了字母a，我们可能只需要把“滑动窗口”向右平移就好了，而不是重置到字母b，重新计算bcde是否有重复。于是有了方案2</p>
-<ol start="2">
-<li>方案二：</li>
-</ol>
-
+<h3 id="思路二 构造大数组，插入排序，小数组插入到大数组之中，然后直接利用数组random access特性，直接取到结果。预期空间复杂度都会高于方案一，因为需要新申请数组, 处理得好的话时间复杂度也许会好一些，插入过程中注意插入位置是不是在中间位置之后，如果是的话可以直接中断返回结果。代码略">思路二 构造大数组，插入排序，小数组插入到大数组之中，然后直接利用数组random access特性，直接取到结果。预期空间复杂度都会高于方案一，因为需要新申请数组, 处理得好的话时间复杂度也许会好一些，插入过程中注意插入位置是不是在中间位置之后，如果是的话可以直接中断返回结果。代码略</h3>
           </div>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">
+            <a class="purple-link" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">
               <h3 class="post-title">
-                下一篇：leetcode刷题记-002
+                下一篇：leetcode刷题记-003
               </h3>
             </a>
           </div>
