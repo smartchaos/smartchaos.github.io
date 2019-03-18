@@ -1,9 +1,11 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>Smart Chaos Notes</title>
+<title>友情链接 | Smart Chaos Notes</title>
 <meta name="description" content="沉舟侧畔千帆过，病树前头万木春">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -12,6 +14,12 @@
 <link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico">
 <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -78,105 +86,46 @@
 </transition>
 
 
-        <div class="content-container">
-          
-          
+      <div class="content-container">
+        <div class="post-detail">
+          <h2 class="post-title">友情链接</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-03-18</span>
+            
+          </div>
+          <div class="post-content">
+            <p><a href="https://filehole.github.io/">文件洞</a></p>
 
-<div class="archives-container">
-  
-    <h2 class="year">2019</h2>
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/links">
-            <h2 class="post-title">
-              友情链接
-              <small>2019-03-18</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/about">
-            <h2 class="post-title">
-              About me
-              <small>2019-03-18</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">
-            <h2 class="post-title">
-              leetcode刷题记-004
-              <small>2019-03-08</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">
-            <h2 class="post-title">
-              leetcode刷题记-003
-              <small>2019-03-05</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">
-            <h2 class="post-title">
-              leetcode刷题记-002
-              <small>2019-03-05</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-001">
-            <h2 class="post-title">
-              leetcode刷题记-001
-              <small>2019-03-05</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/hello-the-world">
-            <h2 class="post-title">
-              Hello The World
-              <small>2019-03-04</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-  
-</div>
-
-
+          </div>
         </div>
 
-        <div class="site-footer">
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://smartchaos.github.io//post/about">
+              <h3 class="post-title">
+                下一篇：About me
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
   <div class="slogan">沉舟侧畔千帆过，病树前头万木春</div>
   <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。
 </div>
 
 
-      </div>
-      <script type="application/javascript">
+    </div>
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
@@ -190,8 +139,30 @@ var app = new Vue({
 </script>
 
 
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '071fa5a9793482b3b5ba',
+        clientSecret: '7c2eab21958a61963e8d4400a1cb8fa4db2952f6',
+        repo: 'smartchaos.github.io',
+        owner: 'smartchaos',
+        admin: ['smartchaos'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
-    </div>
+
+
   </body>
 </html>
