@@ -1,17 +1,16 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
+    <meta charset="utf-8" >
 
 <title>leetcode刷题记-003 | Chaos Notes</title>
 <meta name="description" content="沉舟侧畔千帆过，病树前头万木春">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1555297502100">
 
-<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
 
 
@@ -21,160 +20,281 @@
 
   
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://smartchaos.github.io/">
-        <img class="avatar" src="https://smartchaos.github.io//images/avatar.png" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://smartchaos.github.io/">
-        <h1 class="site-title">Chaos Notes</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://smartchaos.github.io/">Chaos Notes</a></h3>
   </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
         
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-        
-          <a href="/post/links" class="menu purple-link">
-            链接
-          </a>
-        
-      
-        
-          <a href="/post/qipa" class="menu purple-link">
-            奇葩
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
-        <div class="post-detail">
-          <h2 class="post-title">leetcode刷题记-003</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-03-05</span>
+          <li>
             
-          </div>
-          <div class="post-content">
-            <h2 id="问题描述">问题描述</h2><p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">最大不重复子串问题</a></p>
-<h2 id="解题思路">解题思路</h2><ol>
-<li><p>方案一：借助Set判断是否有重复， 通过游标j巡回判断， 实际上是一种暴力破解的思路</p>
-<pre><code class="language-java">public static int lengthOfLongestSubstring(String s) {
-     if (s.length() == 0) {
-         return 0;
-     }
-     int lengthOfRes = 0;
-     Set&lt;Character&gt; set = new HashSet&lt;&gt;();
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/links" class="menu">
+                链接
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/qipa" class="menu">
+                奇葩
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
 
-     int length = s.length();
-     for (int i = 0; i &lt; length; i++) {
-         set.add(s.charAt(i));
-         int j = i + 1;
-         while (j &lt; s.length() &amp;&amp; !set.contains(s.charAt(j))) {
-             set.add(s.charAt(j));
-             if (j - i &gt; lengthOfRes) {
-                 lengthOfRes = j - i;
-             }
-             j++;
-         }
-         set.clear();
-     }
-     return lengthOfRes + 1;
- }</code></pre>
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>leetcode刷题记-003</h1>
+            <p class="article-meta">
+              2019-03-05
+              
+            </p>
+            
+            <div class="post-content">
+              <h2 id="问题描述">问题描述</h2>
+<p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">最大不重复子串问题</a></p>
+<h2 id="解题思路">解题思路</h2>
+<ol>
+<li>方案一：借助Set判断是否有重复， 通过游标j巡回判断， 实际上是一种暴力破解的思路</li>
+</ol>
+<pre><code class="language-java">   public static int lengthOfLongestSubstring(String s) {
+        if (s.length() == 0) {
+            return 0;
+        }
+        int lengthOfRes = 0;
+        Set&lt;Character&gt; set = new HashSet&lt;&gt;();
+
+        int length = s.length();
+        for (int i = 0; i &lt; length; i++) {
+            set.add(s.charAt(i));
+            int j = i + 1;
+            while (j &lt; s.length() &amp;&amp; !set.contains(s.charAt(j))) {
+                set.add(s.charAt(j));
+                if (j - i &gt; lengthOfRes) {
+                    lengthOfRes = j - i;
+                }
+                j++;
+            }
+            set.clear();
+        }
+        return lengthOfRes + 1;
+    }
+</code></pre>
 <p>结果实际上很不理想, 时间复杂度处于后1/3, 内存占用更没法看了。内存占用这点实际上是在预期之内的</p>
 <blockquote>
-<p>Runtime: 61 ms, faster than 22.26% of Java online submissions for Longest Substring Without Repeating Characters.<br>Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest Substring Without Repeating Characters.</p>
+<p>Runtime: 61 ms, faster than 22.26% of Java online submissions for Longest Substring Without Repeating Characters.
+Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest Substring Without Repeating Characters.</p>
 </blockquote>
-</li>
-</ol>
 <p>反思下这个算法性能浪费在哪里了？对于已经具备的计算结果利用率不高可能是关键问题。例如abcdeabc这个case， abcde作为一个整体是没有重复字符的，接下来遇到了字母a，我们可能只需要把“滑动窗口”向右平移就好了，而不是重置到字母b，重新计算bcde是否有重复。于是有了方案2</p>
 <ol start="2">
 <li>方案二：</li>
 </ol>
 
-          </div>
+            </div>
+          </article>
         </div>
-
-        
-          <div class="next-post">
-            <a class="purple-link" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">
-              <h3 class="post-title">
-                下一篇：leetcode刷题记-002
-              </h3>
-            </a>
-          </div>
+        <div class="paper" data-aos="fade-in">
           
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">
+                <h3 class="post-title">
+                  leetcode刷题记-002
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
       </div>
 
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://smartchaos.github.io//images/avatar.png?v=1555297502100" class="no-responsive avatar">
+    <div class="text-muted">沉舟侧畔千帆过，病树前头万木春</div>
+    <div class="social-container">
       
         
-          <div id="gitalk-container"></div>
-        
-
+      
         
       
-
-      <div class="site-footer">
-  <div class="slogan">沉舟侧畔千帆过，病树前头万木春</div>
-  <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg" alt="LICENSE"></a>
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng">字符编码的过程</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/xiang-mu-xie-zuo-bian-kun-nan-shi-zhong-tai-zhan-lue-dai-lai-de-zhen-tong-ma">项目协作变困难，是中台战略带来的阵痛吗？</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">关于命名的BAD CASE</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao">关于表述和物化目标</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/links">友情链接</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/about">About me</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">leetcode刷题记-004</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">leetcode刷题记-003</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">leetcode刷题记-002</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-001">leetcode刷题记-001</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://smartchaos.github.io//tag/wiXglFNzq" class="badge ">
+          leetcode
+        </a>
+      
+        <a href="https://smartchaos.github.io//tag/eH85Ma4r0" class="badge warning">
+          java
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg" alt="LICENSE"></a>
+  </div>
 </div>
 
 
     </div>
-    <script type="application/javascript">
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
 
 hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
 
 </script>
 
