@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://smartchaos.github.io/</id>
+    <title>Chaos Notes</title>
+    <updated>2019-06-10T01:28:12.054Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://smartchaos.github.io/"/>
+    <link rel="self" href="https://smartchaos.github.io//atom.xml"/>
+    <subtitle>沉舟侧畔千帆过，病树前头万木春</subtitle>
+    <logo>https://smartchaos.github.io//images/avatar.png</logo>
+    <icon>https://smartchaos.github.io//favicon.ico</icon>
+    <rights>All rights reserved 2019, Chaos Notes</rights>
+    <entry>
+        <title type="html"><![CDATA[唯物唯心]]></title>
+        <id>https://smartchaos.github.io//post/wei-wu-wei-xin</id>
+        <link href="https://smartchaos.github.io//post/wei-wu-wei-xin">
+        </link>
+        <updated>2019-04-23T07:17:20.000Z</updated>
+        <content type="html"><![CDATA[<p>高中时一位历史老师在闲聊的时候说，“学了这么多年唯物主义，觉得自己在唯心主义路上越走越远了。”</p>
+<p>现在仔细体会一下，唯物主义用冷冰冰的、超越情感的视角来看事情是多么反人类。从自己内心出发去感悟这个世界则简单许多，负担也轻了很多。也许这是一种自我退化？</p>
+<p>彼时我是“历史科代表”，很喜欢这位年轻的老师。她名字很美，取自于诗经“燕燕于飞”。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[字符编码的过程]]></title>
+        <id>https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng</id>
+        <link href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng">
+        </link>
+        <updated>2019-04-12T02:11:57.000Z</updated>
+        <content type="html"><![CDATA[<p>最近在看《Java核心技术-卷1-基础知识》，对于java使用的Utf-16编码有诸多疑惑，其中一点就来自于对字符编码过程的缺乏了解。计算机系统里面的字符编码大约涉及下面几个流程：</p>
+<p><img src="https://smartchaos.github.io//post-images/1555035175019.png" alt="字符编码过程">
+通过这张图，可以比较容易了解到unicode和utf-8的关系，两者处于不同的概念层次上面，前者是形成CCS过程：将字符集里的字符映射成为一个整数, 这个整数又被成为Code Point。而后者则是将前面映射的整数映射成有限长度的比特值（CEF）的过程, 每个最小单元成为一个Code Unit。
+值得一提的是CEF是逐渐演化出来的概念，早期的ASCII编码可以理解为既包含CCS过程也包含CEF过程。从解决问题的角度，这是“增加一层抽象”解决问题的一个案例。
+详细了解可以参考：<a href="https://github.com/acmerfight/insight_python/blob/master/Unicode_and_Character_Sets.md">Insight Python-字符编码</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于命名的BAD CASE]]></title>
+        <id>https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case</id>
+        <link href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">
+        </link>
+        <updated>2019-04-02T00:00:46.000Z</updated>
+        <content type="html"><![CDATA[<p>昨天在对接组内一个同事的接口的时候发现一个问题：他有些命名习惯很怪。</p>
+<ol>
+<li>名字起得“大”而“远”，例如目前做的是一个服务集成的HUB服务，他的命名是“<strong>marketing</strong>”或者“<strong>stastics</strong>”再甚至是“<strong>marketing-data</strong>”。这些名字要么和当前服务没什么关系，要么涵盖的范围太广，缺乏真实的业务含义。初衷可能是想起一个将来“不后悔”的名字。</li>
+<li>用间接的业务目的为行为命名，例如有个枚举字段叫做<code>actionType</code>, 用于标识用户的行为模式，他定义的两个枚举一个叫做<code>lucky_draw</code>一个叫做<code>dispatch_award</code>。但实际的业务行为是，用户中奖之后通过不同的渠道“留资”（留资是得奖的必要条件之一）。但实际上他用了间接业务目的来命名，而业务目的会随不同时间、不同群体变化。这里记录发生了什么更为合适。</li>
+</ol>
+<p>深层次来看，这可能是思维习惯的问题：&quot;<strong>长远的目标干扰，导致不能很好立足于当下；对业务理解程度不足，导致对某些业务理解片面化。</strong>&quot;
+平衡当下和远期目标确实是难题，但是骛远而不立足好当下是不可取的，不踏踏实实理解好业务场景并好好思考和抽象也是不足取的。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于表述和物化目标]]></title>
+        <id>https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao</id>
+        <link href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao">
+        </link>
+        <updated>2019-03-26T23:48:08.000Z</updated>
+        <content type="html"><![CDATA[<p>昨天在和人店技术沟通的时候发现对于一个崭新的“营销中台故事”，大家似乎没什么感知，反馈是营销这个主题太大了，并没有发掘落足点在哪里。而从我这边来看落足点似乎又很清晰：我们要帮助市场营销人员提效。这个提效在我们中台视角会有两个发展方向，一个是通过“范式化”，让工具和模式尽可能做到复用，满足多数营销场景诉求；第二个则是反馈机制的建立，我们希望通过建立ROI机制，让营销也能够迭代。</p>
+<p>问题出在哪里呢？没有表述清楚还是因为大家不熟悉这个领域需要物化？经过后面的讨论，我想可能是后者，大家需要将自己熟悉的现实场景映射到抽象的框架之中，但在听我讲PPT的时候却没能够建立好这种联系。</p>
+<p>这种情境是不是有好的改进方式呢？面向不同的用户群，表述方式需要作出明显区分，否则难免会出现理解的断层。可以想到的正面例子是肯尼迪总统的目标表述：“在未来10年内，把一个美国人送上月球，并使他重返地面。”这个目标面向的是非专业领域的广罗大众，这句话做到了清晰易懂易于传播。而我似乎也需要做一个这样的物化表述，也许是：在两年之内，营销中台要让所有的市场运营部门裁员50%？</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[leetcode刷题记-004]]></title>
+        <id>https://smartchaos.github.io//post/leetcode-shua-ti-ji-004</id>
+        <link href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">
+        </link>
+        <updated>2019-03-08T00:18:53.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="问题">问题</h2>
+<p><a href="">两个有序数组寻找中间值问题</a></p>
+<h2 id="解题思路">解题思路</h2>
+<h3 id="思路一-借鉴有序链表合并的思路">思路一， 借鉴有序链表合并的思路</h3>
+<p>虽然leetcode标记为困难。但实际上很容易会想到“有序链表合并”的思路，在这个思路的基础之上记录下来中间值位置。对于中间值位置，由于在两个数组的长度之和是偶数的时候，需要取中间前后的两个数值计算中间值，所以需要记录前后两个值。附代码：</p>
+<pre><code class="language-java"> public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+         int totalLength = nums1.length + nums2.length;
+        boolean oddFlag = totalLength % 2 == 1;
+        final int middleVal = oddFlag ? totalLength / 2 + 1 : totalLength / 2 + 1;
+
+        //navigate likes two linklists merging
+        int countIndex = 1, idx1 = 0, idx2 = 0;
+        int midPrev = 0, current = 0;
+
+        while (true) {
+            midPrev = current;
+            if (idx1 &lt; nums1.length &amp;&amp; idx2 &lt; nums2.length) {
+                if (nums1[idx1] &lt;= nums2[idx2]) {
+                    current = nums1[idx1];
+                    idx1++;
+                } else {
+                    current = nums2[idx2];
+                    idx2++;
+                }
+            } else if (idx1 &gt;= nums1.length) {
+                current = nums2[idx2];
+                idx2++;
+            } else {
+                current = nums1[idx1];
+                idx1++;
+            }
+        
+            if (countIndex == middleVal) {
+                return oddFlag ? current : (midPrev + current) / 2.0;
+            }
+            countIndex++;
+        }
+    }
+</code></pre>
+<p>这里需要说明的是midPrev记录前值，current记录当前值，总长是奇数长度的只需要关注current即可，否则需要用于加和求中间值，也就是<code>return oddFlag ? current : (midPrev + current) / 2.0</code></p>
+<blockquote>
+<p>Runtime: 24 ms, faster than 94.52% of Java online submissions for Median of Two Sorted Arrays.
+Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of Two Sorted Arrays.</p>
+</blockquote>
+<h3 id="思路二-构造大数组插入排序思路">思路二 构造大数组，插入排序思路</h3>
+<p>小数组插入到大数组之中，然后直接利用数组random access特性，直接取到结果。预期空间复杂度都会高于方案一，因为需要新申请数组,。处理得好的话时间复杂度也许会好一些，插入过程中使用二分查找并且注意插入位置是不是在中间位置之后，如果是的话可以直接中断返回结果。代码略</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[leetcode刷题记-003]]></title>
+        <id>https://smartchaos.github.io//post/leetcode-shua-ti-ji-003</id>
+        <link href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">
+        </link>
+        <updated>2019-03-05T09:07:34.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="问题描述">问题描述</h2>
+<p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">最大不重复子串问题</a></p>
+<h2 id="解题思路">解题思路</h2>
+<ol>
+<li>方案一：借助Set判断是否有重复， 通过游标j巡回判断， 实际上是一种暴力破解的思路</li>
+</ol>
+<pre><code class="language-java">   public static int lengthOfLongestSubstring(String s) {
+        if (s.length() == 0) {
+            return 0;
+        }
+        int lengthOfRes = 0;
+        Set&lt;Character&gt; set = new HashSet&lt;&gt;();
+
+        int length = s.length();
+        for (int i = 0; i &lt; length; i++) {
+            set.add(s.charAt(i));
+            int j = i + 1;
+            while (j &lt; s.length() &amp;&amp; !set.contains(s.charAt(j))) {
+                set.add(s.charAt(j));
+                if (j - i &gt; lengthOfRes) {
+                    lengthOfRes = j - i;
+                }
+                j++;
+            }
+            set.clear();
+        }
+        return lengthOfRes + 1;
+    }
+</code></pre>
+<p>结果实际上很不理想, 时间复杂度处于后1/3, 内存占用更没法看了。内存占用这点实际上是在预期之内的</p>
+<blockquote>
+<p>Runtime: 61 ms, faster than 22.26% of Java online submissions for Longest Substring Without Repeating Characters.
+Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest Substring Without Repeating Characters.</p>
+</blockquote>
+<p>反思下这个算法性能浪费在哪里了？对于已经具备的计算结果利用率不高可能是关键问题。例如abcdeabc这个case， abcde作为一个整体是没有重复字符的，接下来遇到了字母a，我们可能只需要把“滑动窗口”向右平移就好了，而不是重置到字母b，重新计算bcde是否有重复。于是有了方案2</p>
+<ol start="2">
+<li>方案二：</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[leetcode刷题记-002]]></title>
+        <id>https://smartchaos.github.io//post/leetcode-shua-ti-ji-002</id>
+        <link href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">
+        </link>
+        <updated>2019-03-05T05:08:25.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="问题">问题</h2>
+<p><a href="https://leetcode.com/problems/add-two-numbers/">两个链表相加问题，情境类似于十进制大数加法</a></p>
+<h2 id="解决方案">解决方案</h2>
+<h3 id="原始方案">原始方案</h3>
+<p>问题难点在于边界，直接上代码</p>
+<pre><code class="language-java">public ListNode addTwoNumbers(ListNode l1, ListNode l2) {int carryFlag = 0, plusHolder;
+        ListNode res = null;
+        ListNode curPos = null;
+        while (true) {
+            plusHolder = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + carryFlag;
+            carryFlag = plusHolder / 10;
+            ListNode newNode = new ListNode(carryFlag == 0 ? plusHolder : (plusHolder - 10));
+            if (res == null) {
+                res = newNode;
+                curPos = res;
+            } else {
+                curPos.next = newNode;
+                curPos = curPos.next;
+            }
+            if (l1 != null)
+                l1 = l1.next;
+            if (l2 != null)
+                l2 = l2.next;
+            if (l1 == null &amp;&amp; l2 == null &amp;&amp; carryFlag != 1) {
+                return res;
+            }
+        }
+    }
+</code></pre>
+<p>执行结果如下：</p>
+<blockquote>
+<p>Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.
+Memory Usage: 48.2 MB, less than 17.15% of Java online submissions for Add Two Numbers.</p>
+</blockquote>
+<p>从结果来看广大网友似乎更多是在节省空间复杂度上下了功夫。</p>
+<h3 id="改进思路">改进思路，</h3>
+<p>是不是可以利用L1或者L2保存结果以节省空间呢？也就是以常见的merge链表的思路去做</p>
+<pre><code class="language-java">public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        int carryFlag = 0, plusHolder;
+        ListNode prevPos = l1;
+        ListNode headPos = l1;
+        while (true) {
+            plusHolder = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + carryFlag;
+            carryFlag = plusHolder / 10;
+            if (l1 == null) {
+                ListNode newNode = new ListNode(carryFlag == 0 ? plusHolder : (plusHolder - 10));
+                prevPos.next = newNode;
+                l1 = prevPos.next;
+            } else {
+                l1.val = carryFlag == 0 ? plusHolder : (plusHolder - 10);
+            }
+            prevPos = l1;
+            l1 = l1.next;
+            if (l2 != null)
+                l2 = l2.next;
+            if (l1 == null &amp;&amp; l2 == null &amp;&amp; carryFlag != 1) {
+                return headPos;
+            }
+        }
+    }
+</code></pre>
+<p>结果在执行\空间占用上面确有优化：</p>
+<blockquote>
+<p>Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.
+Memory Usage: 47.8 MB, less than 41.60% of Java online submissions for Add Two Numbers.</p>
+</blockquote>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[leetcode刷题记-001]]></title>
+        <id>https://smartchaos.github.io//post/leetcode-shua-ti-ji-001</id>
+        <link href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-001">
+        </link>
+        <updated>2019-03-05T02:09:41.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="问题">问题：</h2>
+<p><a href="https://leetcode.com/problems/two-sum/">两数相加等于目标值</a></p>
+<h2 id="解题思路">解题思路</h2>
+<ol>
+<li>容易想到的是双层循环, 时间复杂度O(n^2)。需要关注的是题目提示只有一个答案，并且暗示不该出现自己和自己相加的情形（影响到边界处理条件）。代码如下：</li>
+</ol>
+<pre><code class="language-java">public int[] twoSum(int[] nums, int target) {
+        int j = nums.length - 1;
+        do {
+            int i = 0;
+            while (i &lt; j) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[]{i, j};
+                }
+                i++;
+            }
+        } while (--j &gt; 0);
+        new IllegalArgumentException(&quot;No two sum solution&quot;);
+    }
+</code></pre>
+<blockquote>
+<p>Runtime: 20 ms, faster than 41.25% of Java online submissions for Two Sum.
+Memory Usage: 38.5 MB, less than 45.94% of Java online submissions for Two Sum.</p>
+</blockquote>
+<ol start="2">
+<li>容易想到的还有先用target与数组里的值做差，再借助Map这种数据结构, 遍历原数组寻找“配对”值下标。时间复杂度变为O(n)</li>
+</ol>
+<pre><code class="language-java">public int[] twoSum(int[] nums, int target) {
+        Map&lt;Integer, Integer&gt; diffMap = new HashMap&lt;&gt;(nums.length);
+        for (int i = 0; i &lt; nums.length; i++) {
+            diffMap.put(target - nums[i], i);
+        }
+        for (int i = 0; i &lt; nums.length; i++) {
+            Integer oriIndex = diffMap.get(nums[i]);
+            if (oriIndex != null &amp;&amp; i != oriIndex) {
+                return new int[]{i, oriIndex};
+            }
+        }
+        return new int[2];
+    }
+</code></pre>
+<blockquote>
+<p>Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.
+Memory Usage: 38.3 MB, less than 63.08% of Java online submissions for Two Sum.</p>
+</blockquote>
+<ol start="3">
+<li>看了官方的solution集，发现还有更加紧凑的解法，只需要一次循环。思路是边循环边设置并检查map，如果加和等于target则终止，最坏情况是第一个元素和最后一个元素匹配。</li>
+</ol>
+<pre><code class="language-java">public int[] twoSum(int[] nums, int target) {
+        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;(nums.length);
+        for (int i = 0; i &lt; nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), i};
+            }
+            map.put(nums[i], i);
+        }
+        throw new IllegalArgumentException(&quot;No two sum solution&quot;);
+    }
+</code></pre>
+<blockquote>
+<p>Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.
+Memory Usage: 39.2 MB, less than 21.98% of Java online submissions for Two Sum.</p>
+</blockquote>
+<p>有意思的是，内存使用量比方案2多，会是什么原因呢？</p>
+]]></content>
+    </entry>
+</feed>
