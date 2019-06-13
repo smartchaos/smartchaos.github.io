@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smartchaos.github.io/</id>
     <title>Chaos Notes</title>
-    <updated>2019-06-10T01:28:12.054Z</updated>
+    <updated>2019-06-13T03:05:21.346Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smartchaos.github.io/"/>
     <link rel="self" href="https://smartchaos.github.io//atom.xml"/>
@@ -10,6 +10,29 @@
     <logo>https://smartchaos.github.io//images/avatar.png</logo>
     <icon>https://smartchaos.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Chaos Notes</rights>
+    <entry>
+        <title type="html"><![CDATA[中关村软件园孵化器楼停车攻略]]></title>
+        <id>https://smartchaos.github.io//post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue</id>
+        <link href="https://smartchaos.github.io//post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue">
+        </link>
+        <updated>2019-05-21T00:30:15.000Z</updated>
+        <content type="html"><![CDATA[<p>近期搬到新办公地点，是除了公共配套之外都很不错的办公区域。公共配套中尤为突出的是交通问题，作为开车一族（就我而言不开车更难受，几公里的距离需要倒3辆车+步行1km），用两天时间把周边转了个遍，整理出一个简单的停车攻略。</p>
+<h2 id="软件园内">软件园内</h2>
+<p>这里的特点是每栋大厦自成体系，宁可空着车位也要守住自己的“一亩三分地”。所以内部基本上没有对外开放的停车场，唯一的清流是“数字山谷大厦”，</p>
+<blockquote>
+<p>停车费标准：无包月，大概200+车位。
+地面停车：7-19点4元/h, 不封顶；19-次日7点3元/h, 不封顶。
+地库停车：7-19点6元/h, 不封顶；19-次日7点4元/h，不封顶。</p>
+</blockquote>
+<p>除了这个选择之外，还可以停在东南侧环宇大厦往东的路边，收费</p>
+<h2 id="周边停车场">周边停车场</h2>
+<ol>
+<li>南面百旺绿茵停车场，价格4元每小时, 可以包月400，季付1000，车位比较充足，距离孵化器1.2km+。</li>
+<li>东大停车场（西），包月300，车位总体充足，步行到孵化器900米。从这个停车场出去后的后厂村路左转车道常年拥堵，一般需要2-3个红绿灯才能通过。</li>
+<li>西南侧软通动力南停车场，车入口接近浪潮大厦，东北角有个人行入口，200每月， 车位充足。</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[唯物唯心]]></title>
         <id>https://smartchaos.github.io//post/wei-wu-wei-xin</id>
@@ -158,6 +181,27 @@ Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest S
 <ol start="2">
 <li>方案二：</li>
 </ol>
+<pre><code class="language-java">public int lengthOfLongestSubstring(String s) {
+        int length = s.length();
+        if (length &lt;= 1) {
+            return length;
+        }
+        int ans = 0;
+        Map&lt;Character, Integer&gt; window = new HashMap&lt;&gt;(length);
+        for (int i = 0, j = 0; j &lt; length; j++) {
+            char currChar = s.charAt(j);
+            if (window.containsKey(currChar)) {
+                i = Math.max(window.get(currChar)+1, i);
+            }
+            ans = Math.max(ans, j - i + 1);
+            window.put(currChar, j);
+        }
+        return ans;
+    }
+</code></pre>
+<p>这里最关键的是<code>i = Math.max(window.get(currChar), i);</code>这一句，这决定了窗口起始位置移动到哪里。
+这个执行的结果大致如图：
+<img src="https://smartchaos.github.io//post-images/1560395089096.png" alt="">，内存占用排名在前10%</p>
 ]]></content>
     </entry>
     <entry>

@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>leetcode刷题记-004 | Chaos Notes</title>
+<title>中关村软件园孵化器楼停车攻略 | Chaos Notes</title>
 <link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1560395118970">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
@@ -96,65 +96,31 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              leetcode刷题记-004
+              中关村软件园孵化器楼停车攻略
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-03-08 ·
+                · 2019-05-21 ·
               </time>
               
             </div>
             
-              <div class="post-feature-image" style="background-image: url('https://smartchaos.github.io//post-images/leetcode-shua-ti-ji-004.png')">
-              </div>
-            
             <div class="post-content">
-              <h2 id="问题">问题</h2>
-<p><a href="">两个有序数组寻找中间值问题</a></p>
-<h2 id="解题思路">解题思路</h2>
-<h3 id="思路一-借鉴有序链表合并的思路">思路一， 借鉴有序链表合并的思路</h3>
-<p>虽然leetcode标记为困难。但实际上很容易会想到“有序链表合并”的思路，在这个思路的基础之上记录下来中间值位置。对于中间值位置，由于在两个数组的长度之和是偶数的时候，需要取中间前后的两个数值计算中间值，所以需要记录前后两个值。附代码：</p>
-<pre><code class="language-java"> public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-         int totalLength = nums1.length + nums2.length;
-        boolean oddFlag = totalLength % 2 == 1;
-        final int middleVal = oddFlag ? totalLength / 2 + 1 : totalLength / 2 + 1;
-
-        //navigate likes two linklists merging
-        int countIndex = 1, idx1 = 0, idx2 = 0;
-        int midPrev = 0, current = 0;
-
-        while (true) {
-            midPrev = current;
-            if (idx1 &lt; nums1.length &amp;&amp; idx2 &lt; nums2.length) {
-                if (nums1[idx1] &lt;= nums2[idx2]) {
-                    current = nums1[idx1];
-                    idx1++;
-                } else {
-                    current = nums2[idx2];
-                    idx2++;
-                }
-            } else if (idx1 &gt;= nums1.length) {
-                current = nums2[idx2];
-                idx2++;
-            } else {
-                current = nums1[idx1];
-                idx1++;
-            }
-        
-            if (countIndex == middleVal) {
-                return oddFlag ? current : (midPrev + current) / 2.0;
-            }
-            countIndex++;
-        }
-    }
-</code></pre>
-<p>这里需要说明的是midPrev记录前值，current记录当前值，总长是奇数长度的只需要关注current即可，否则需要用于加和求中间值，也就是<code>return oddFlag ? current : (midPrev + current) / 2.0</code></p>
+              <p>近期搬到新办公地点，是除了公共配套之外都很不错的办公区域。公共配套中尤为突出的是交通问题，作为开车一族（就我而言不开车更难受，几公里的距离需要倒3辆车+步行1km），用两天时间把周边转了个遍，整理出一个简单的停车攻略。</p>
+<h2 id="软件园内">软件园内</h2>
+<p>这里的特点是每栋大厦自成体系，宁可空着车位也要守住自己的“一亩三分地”。所以内部基本上没有对外开放的停车场，唯一的清流是“数字山谷大厦”，</p>
 <blockquote>
-<p>Runtime: 24 ms, faster than 94.52% of Java online submissions for Median of Two Sorted Arrays.
-Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of Two Sorted Arrays.</p>
+<p>停车费标准：无包月，大概200+车位。
+地面停车：7-19点4元/h, 不封顶；19-次日7点3元/h, 不封顶。
+地库停车：7-19点6元/h, 不封顶；19-次日7点4元/h，不封顶。</p>
 </blockquote>
-<h3 id="思路二-构造大数组插入排序思路">思路二 构造大数组，插入排序思路</h3>
-<p>小数组插入到大数组之中，然后直接利用数组random access特性，直接取到结果。预期空间复杂度都会高于方案一，因为需要新申请数组,。处理得好的话时间复杂度也许会好一些，插入过程中使用二分查找并且注意插入位置是不是在中间位置之后，如果是的话可以直接中断返回结果。代码略</p>
+<p>除了这个选择之外，还可以停在东南侧环宇大厦往东的路边，收费</p>
+<h2 id="周边停车场">周边停车场</h2>
+<ol>
+<li>南面百旺绿茵停车场，价格4元每小时, 可以包月400，季付1000，车位比较充足，距离孵化器1.2km+。</li>
+<li>东大停车场（西），包月300，车位总体充足，步行到孵化器900米。从这个停车场出去后的后厂村路左转车道常年拥堵，一般需要2-3个红绿灯才能通过。</li>
+<li>西南侧软通动力南停车场，车入口接近浪潮大厦，东北角有个人行入口，200每月， 车位充足。</li>
+</ol>
 
             </div>
           </article>
@@ -163,9 +129,9 @@ Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of T
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">
+            <a href="https://smartchaos.github.io//post/wei-wu-wei-xin">
               <h3 class="post-title">
-                leetcode刷题记-003
+                唯物唯心
               </h3>
             </a>
           </div>  
