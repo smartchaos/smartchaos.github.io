@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>leetcode刷题记-004 | Chaos Notes</title>
-<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1560396365449">
+<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1561716728427">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
 
@@ -18,7 +18,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://smartchaos.github.io/">
-  <img class="avatar" src="https://smartchaos.github.io//images/avatar.png?v=1560396365449" alt="">
+  <img class="avatar" src="https://smartchaos.github.io//images/avatar.png?v=1561716728427" alt="">
   </a>
   <h1 class="site-title">
     Chaos Notes
@@ -151,10 +151,10 @@
 <p>这里需要说明的是midPrev记录前值，current记录当前值，总长是奇数长度的只需要关注current即可，否则需要用于加和求中间值，也就是<code>return oddFlag ? current : (midPrev + current) / 2.0</code></p>
 <blockquote>
 <p>Runtime: 24 ms, faster than 94.52% of Java online submissions for Median of Two Sorted Arrays.
-Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of Two Sorted Arrays.</p>
+Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of Two Sorted Arrays.	
+不幸的是，这个答案是错的！时间复杂度是O(m+n), 而不是O(log(m+n))。LeetCode居然没能够检测出来。</p>
 </blockquote>
-<h3 id="思路二-构造大数组插入排序思路">思路二 构造大数组，插入排序思路</h3>
-<p>小数组插入到大数组之中，然后直接利用数组random access特性，直接取到结果。预期空间复杂度都会高于方案一，因为需要新申请数组,。处理得好的话时间复杂度也许会好一些，插入过程中使用二分查找并且注意插入位置是不是在中间位置之后，如果是的话可以直接中断返回结果。代码略</p>
+<h3 id="思路二-利用有序特征二分">思路二 利用有序特征二分</h3>
 
             </div>
           </article>
