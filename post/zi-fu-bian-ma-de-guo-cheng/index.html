@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
+    <meta charset="utf-8" >
 
 <title>字符编码的过程 | Chaos Notes</title>
 <meta name="description" content="沉舟侧畔千帆过，病树前头万木春">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1564022257502">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1564022155882">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
 
 
@@ -22,148 +20,244 @@
 
   
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://smartchaos.github.io/">
-        <img class="avatar" src="https://smartchaos.github.io//images/avatar.png?v=1564022155882" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://smartchaos.github.io/">
-        <h1 class="site-title">Chaos Notes</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://smartchaos.github.io/">Chaos Notes</a></h3>
   </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
         
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/qipa" class="menu purple-link">
-            奇葩
-          </a>
-        
-      
-        
-          <a href="/post/links" class="menu purple-link">
-            友链
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
-        <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://smartchaos.github.io//post-images/zi-fu-bian-ma-de-guo-cheng.jpg')">
-            </div>
-          
-          <h2 class="post-title">字符编码的过程</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-04-12</span>
+          <li>
             
-          </div>
-          <div class="post-content">
-            <p>最近在看《Java核心技术-卷1-基础知识》，对于java使用的Utf-16编码有诸多疑惑，其中一点就来自于对字符编码过程的缺乏了解。计算机系统里面的字符编码大约涉及下面几个流程：</p>
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/qipa" class="menu">
+                奇葩
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/links" class="menu">
+                友链
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>字符编码的过程</h1>
+            <p class="article-meta">
+              2019-04-12
+              
+            </p>
+            
+              <img src="https://smartchaos.github.io//post-images/zi-fu-bian-ma-de-guo-cheng.jpg" alt="字符编码的过程">
+            
+            <div class="post-content">
+              <p>最近在看《Java核心技术-卷1-基础知识》，对于java使用的Utf-16编码有诸多疑惑，其中一点就来自于对字符编码过程的缺乏了解。计算机系统里面的字符编码大约涉及下面几个流程：</p>
 <p><img src="https://smartchaos.github.io//post-images/1555035175019.png" alt="字符编码过程"><br>
 通过这张图，可以比较容易了解到unicode和utf-8的关系，两者处于不同的概念层次上面，前者是形成CCS过程：将字符集里的字符映射成为一个整数, 这个整数又被成为Code Point。而后者则是将前面映射的整数映射成有限长度的比特值（CEF）的过程, 每个最小单元成为一个Code Unit。<br>
 值得一提的是CEF是逐渐演化出来的概念，早期的ASCII编码可以理解为既包含CCS过程也包含CEF过程。从解决问题的角度，这是“增加一层抽象”解决问题的一个案例。<br>
 详细了解可以参考：<a href="https://github.com/acmerfight/insight_python/blob/master/Unicode_and_Character_Sets.md">Insight Python-字符编码</a></p>
 
-          </div>
+            </div>
+          </article>
         </div>
-
-        
-          <div class="next-post">
-            <a class="purple-link" href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">
-              <h3 class="post-title">
-                下一篇：关于命名的BAD CASE
-              </h3>
-            </a>
-          </div>
+        <div class="paper" data-aos="fade-in">
           
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">
+                <h3 class="post-title">
+                  关于命名的BAD CASE
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
       </div>
 
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://smartchaos.github.io//images/avatar.png?v=1564022257502" class="no-responsive avatar">
+    <div class="text-muted">沉舟侧畔千帆过，病树前头万木春</div>
+    <div class="social-container">
       
         
-          <div id="gitalk-container"></div>
-        
-
+      
         
       
-
-      <div class="site-footer">
-  <div class="slogan">沉舟侧畔千帆过，病树前头万木春</div>
-  <div class="social-container">
-    
+        
       
-    
+        
       
-    
+        
       
-    
-      
-    
-      
-    
+    </div>
   </div>
-  <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg" alt="LICENSE"></a>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue">中关村软件园孵化器楼停车攻略</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/wei-wu-wei-xin">唯物唯心</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng">字符编码的过程</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">关于命名的BAD CASE</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao">关于表述和物化目标</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">leetcode刷题记-004</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">leetcode刷题记-003</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">leetcode刷题记-002</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-001">leetcode刷题记-001</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://smartchaos.github.io//tag/wiXglFNzq" class="badge ">
+          leetcode
+        </a>
+      
+        <a href="https://smartchaos.github.io//tag/eH85Ma4r0" class="badge secondary">
+          java
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg" alt="LICENSE"></a>
+  </div>
 </div>
 
 
     </div>
-    <script type="application/javascript">
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
 
 hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
 
 </script>
 

@@ -1,18 +1,16 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
+    <meta charset="utf-8" >
 
 <title>关于表述和物化目标 | Chaos Notes</title>
 <meta name="description" content="沉舟侧畔千帆过，病树前头万木春">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1564022257502">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1564022155882">
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
 
 
@@ -22,146 +20,242 @@
 
   
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://smartchaos.github.io/">
-        <img class="avatar" src="https://smartchaos.github.io//images/avatar.png?v=1564022155882" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://smartchaos.github.io/">
-        <h1 class="site-title">Chaos Notes</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+  
+    <nav class="navbar border fixed split-nav">
+  <div class="nav-brand">
+    <h3><a href="https://smartchaos.github.io/">Chaos Notes</a></h3>
   </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
+  <div class="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </label>
+    </button>
+    <div class="collapsible-body">
+      <ul class="inline">
         
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/qipa" class="menu purple-link">
-            奇葩
-          </a>
-        
-      
-        
-          <a href="/post/links" class="menu purple-link">
-            友链
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
-        <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://smartchaos.github.io//post-images/guan-yu-biao-shu-he-wu-hua-mu-biao.jpg')">
-            </div>
-          
-          <h2 class="post-title">关于表述和物化目标</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2019-03-27</span>
+          <li>
             
-          </div>
-          <div class="post-content">
-            <p>昨天在和人店技术沟通的时候发现对于一个崭新的“营销中台故事”，大家似乎没什么感知，反馈是营销这个主题太大了，并没有发掘落足点在哪里。而从我这边来看落足点似乎又很清晰：我们要帮助市场营销人员提效。这个提效在我们中台视角会有两个发展方向，一个是通过“范式化”，让工具和模式尽可能做到复用，满足多数营销场景诉求；第二个则是反馈机制的建立，我们希望通过建立ROI机制，让营销也能够迭代。</p>
+              <a href="/" class="menu">
+                首页
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/archives" class="menu">
+                归档
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/tags" class="menu">
+                标签
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/qipa" class="menu">
+                奇葩
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/links" class="menu">
+                友链
+              </a>
+            
+          </li>
+        
+          <li>
+            
+              <a href="/post/about" class="menu">
+                关于
+              </a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="top" class="row site">
+      <div class="sm-12 md-8 col">
+        <div class="paper">
+          <article class="article">
+            <h1>关于表述和物化目标</h1>
+            <p class="article-meta">
+              2019-03-27
+              
+            </p>
+            
+              <img src="https://smartchaos.github.io//post-images/guan-yu-biao-shu-he-wu-hua-mu-biao.jpg" alt="关于表述和物化目标">
+            
+            <div class="post-content">
+              <p>昨天在和人店技术沟通的时候发现对于一个崭新的“营销中台故事”，大家似乎没什么感知，反馈是营销这个主题太大了，并没有发掘落足点在哪里。而从我这边来看落足点似乎又很清晰：我们要帮助市场营销人员提效。这个提效在我们中台视角会有两个发展方向，一个是通过“范式化”，让工具和模式尽可能做到复用，满足多数营销场景诉求；第二个则是反馈机制的建立，我们希望通过建立ROI机制，让营销也能够迭代。</p>
 <p>问题出在哪里呢？没有表述清楚还是因为大家不熟悉这个领域需要物化？经过后面的讨论，我想可能是后者，大家需要将自己熟悉的现实场景映射到抽象的框架之中，但在听我讲PPT的时候却没能够建立好这种联系。</p>
 <p>这种情境是不是有好的改进方式呢？面向不同的用户群，表述方式需要作出明显区分，否则难免会出现理解的断层。可以想到的正面例子是肯尼迪总统的目标表述：“在未来10年内，把一个美国人送上月球，并使他重返地面。”这个目标面向的是非专业领域的广罗大众，这句话做到了清晰易懂易于传播。而我似乎也需要做一个这样的物化表述，也许是：在两年之内，营销中台要让所有的市场运营部门裁员50%？</p>
 
-          </div>
+            </div>
+          </article>
         </div>
-
-        
-          <div class="next-post">
-            <a class="purple-link" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">
-              <h3 class="post-title">
-                下一篇：leetcode刷题记-004
-              </h3>
-            </a>
-          </div>
+        <div class="paper" data-aos="fade-in">
           
+            <div class="next-post">
+              <div class="next">
+                下一篇
+              </div>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">
+                <h3 class="post-title">
+                  leetcode刷题记-004
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+        
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
       </div>
 
+      <div class="sm-12 md-4 col sidebar">
+  <div class="paper info-container">
+    <img src="https://smartchaos.github.io//images/avatar.png?v=1564022257502" class="no-responsive avatar">
+    <div class="text-muted">沉舟侧畔千帆过，病树前头万木春</div>
+    <div class="social-container">
       
         
-          <div id="gitalk-container"></div>
-        
-
+      
         
       
-
-      <div class="site-footer">
-  <div class="slogan">沉舟侧畔千帆过，病树前头万木春</div>
-  <div class="social-container">
-    
+        
       
-    
+        
       
-    
+        
       
-    
-      
-    
-      
-    
+    </div>
   </div>
-  <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg" alt="LICENSE"></a>
+  <div class="paper">
+    <div class="sidebar-title">
+      最新文章
+    </div>
+    <div class="row">
+      <ul>
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue">中关村软件园孵化器楼停车攻略</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/wei-wu-wei-xin">唯物唯心</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng">字符编码的过程</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">关于命名的BAD CASE</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao">关于表述和物化目标</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">leetcode刷题记-004</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">leetcode刷题记-003</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">leetcode刷题记-002</a>
+            </li>
+          
+        
+          
+            <li>
+              <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-001">leetcode刷题记-001</a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </div>
+  <div class="paper">
+    <div class="sidebar-title">
+      标签列表
+    </div>
+    <div class="row">
+      
+        <a href="https://smartchaos.github.io//tag/wiXglFNzq" class="badge warning">
+          leetcode
+        </a>
+      
+        <a href="https://smartchaos.github.io//tag/eH85Ma4r0" class="badge secondary">
+          java
+        </a>
+      
+    </div>
+  </div>
+  <div class="paper">
+    <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg" alt="LICENSE"></a>
+  </div>
 </div>
 
 
     </div>
-    <script type="application/javascript">
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
 
 hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
 
 </script>
 
