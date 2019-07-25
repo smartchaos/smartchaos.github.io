@@ -1,222 +1,225 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Chaos Notes</title>
-<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1561718787983">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    Chaos Notes
+</title>
+<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1564020850057">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://smartchaos.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://smartchaos.github.io/">
-  <img class="avatar" src="https://smartchaos.github.io//images/avatar.png?v=1561718787983" alt="">
-  </a>
-  <h1 class="site-title">
-    Chaos Notes
-  </h1>
-  <p class="site-description">
-    沉舟侧畔千帆过，病树前头万木春
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/qipa" class="menu">
-          奇葩
-        </a>
-      
-    
-      
-        <a href="/post/links" class="menu">
-          友链
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/smartchaos" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      
-    
-      
-        <a href="https://twitter.com/Smartychaos" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      
-    
-      
-        <a href="https://weibo.com/yoursailing" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://smartchaos.github.io/">
+                <img class="avatar" src="https://smartchaos.github.io//images/avatar.png?v=1564020850057" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    Chaos Notes
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/qipa" class="menu">
+                                    奇葩
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/links" class="menu">
+                                    友链
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
-    
-        
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
 
-<div class="archives-container">
-  
-    <h2 class="year">2019</h2>
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue">
-            <h2 class="post-title">
-              中关村软件园孵化器楼停车攻略
-              <small>2019-05-21</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/wei-wu-wei-xin">
-            <h2 class="post-title">
-              唯物唯心
-              <small>2019-04-23</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng">
-            <h2 class="post-title">
-              字符编码的过程
-              <small>2019-04-12</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">
-            <h2 class="post-title">
-              关于命名的BAD CASE
-              <small>2019-04-02</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao">
-            <h2 class="post-title">
-              关于表述和物化目标
-              <small>2019-03-27</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">
-            <h2 class="post-title">
-              leetcode刷题记-004
-              <small>2019-03-08</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">
-            <h2 class="post-title">
-              leetcode刷题记-003
-              <small>2019-03-05</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">
-            <h2 class="post-title">
-              leetcode刷题记-002
-              <small>2019-03-05</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-      
-        <article class="post">
-          <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-001">
-            <h2 class="post-title">
-              leetcode刷题记-001
-              <small>2019-03-05</small>
-            </h2>
-          </a>
-        </article>
-      
-    
-  
-</div>
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
 
-    
-        <div class="pagination-container">
-  
-  
-</div>
+        });
+    });
+</script>
 
-    
-        <div class="site-footer">
-  <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg" alt="LICENSE"></a>
+            
+
+    <div class="archives-container main-container">
+        <ul class="timeline">
+            
+                <li>
+                    <h3 class="year">
+                        2019
+                    </h3>
+                    <ul class="year-wrapper">
+                        
+                            
+                                <li>
+                                    <span class="date">2019-05-21</span>
+                                    <a class="title" href="https://smartchaos.github.io//post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue">
+                                        <span>中关村软件园孵化器楼停车攻略</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2019-04-23</span>
+                                    <a class="title" href="https://smartchaos.github.io//post/wei-wu-wei-xin">
+                                        <span>唯物唯心</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2019-04-12</span>
+                                    <a class="title" href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng">
+                                        <span>字符编码的过程</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2019-04-02</span>
+                                    <a class="title" href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">
+                                        <span>关于命名的BAD CASE</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2019-03-27</span>
+                                    <a class="title" href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao">
+                                        <span>关于表述和物化目标</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2019-03-08</span>
+                                    <a class="title" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">
+                                        <span>leetcode刷题记-004</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2019-03-05</span>
+                                    <a class="title" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">
+                                        <span>leetcode刷题记-003</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2019-03-05</span>
+                                    <a class="title" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">
+                                        <span>leetcode刷题记-002</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                            
+                                <li>
+                                    <span class="date">2019-03-05</span>
+                                    <a class="title" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-001">
+                                        <span>leetcode刷题记-001</span>
+                                    </a>
+                                </li>
+                                
+                                    
+                    </ul>
+
+                </li>
+                
+        </ul>
+    </div>
+
+                
+
+                    <div class="site-footer">
+  <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg" alt="LICENSE"></a> | 
+  <a class="rss" href="https://smartchaos.github.io//atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
   hljs.initHighlightingOnLoad()
 </script>
 
-      </div>
     </div>
-  </body>
+</body>
+
 </html>

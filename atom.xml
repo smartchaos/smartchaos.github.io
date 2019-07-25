@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smartchaos.github.io/</id>
     <title>Chaos Notes</title>
-    <updated>2019-06-28T10:46:31.601Z</updated>
+    <updated>2019-07-25T02:14:19.982Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smartchaos.github.io/"/>
     <link rel="self" href="https://smartchaos.github.io//atom.xml"/>
@@ -20,8 +20,8 @@
 <h2 id="软件园内">软件园内</h2>
 <p>这里的特点是每栋大厦自成体系，宁可空着车位也要守住自己的“一亩三分地”。所以内部基本上没有对外开放的停车场，唯一的清流是“数字山谷大厦”，</p>
 <blockquote>
-<p>停车费标准：无包月，大概200+车位。
-地面停车：7-19点1元/15分钟, 不封顶；19-次日7点3元/h, 不封顶。
+<p>停车费标准：无包月，大概200+车位。<br>
+地面停车：7-19点1元/15分钟, 不封顶；19-次日7点3元/h, 不封顶。<br>
 地库停车：7-19点1.5元/15分钟, 不封顶；19-次日7点4元/h，不封顶。</p>
 </blockquote>
 <p>除了这个选择之外，还可以停在东南侧环宇大厦往东的路边（算园区路边停车位），收费0.5元/15分钟，院区内公共停车位实际数量比较少，难以找到。</p>
@@ -52,9 +52,9 @@
         </link>
         <updated>2019-04-12T02:11:57.000Z</updated>
         <content type="html"><![CDATA[<p>最近在看《Java核心技术-卷1-基础知识》，对于java使用的Utf-16编码有诸多疑惑，其中一点就来自于对字符编码过程的缺乏了解。计算机系统里面的字符编码大约涉及下面几个流程：</p>
-<p><img src="https://smartchaos.github.io//post-images/1555035175019.png" alt="字符编码过程">
-通过这张图，可以比较容易了解到unicode和utf-8的关系，两者处于不同的概念层次上面，前者是形成CCS过程：将字符集里的字符映射成为一个整数, 这个整数又被成为Code Point。而后者则是将前面映射的整数映射成有限长度的比特值（CEF）的过程, 每个最小单元成为一个Code Unit。
-值得一提的是CEF是逐渐演化出来的概念，早期的ASCII编码可以理解为既包含CCS过程也包含CEF过程。从解决问题的角度，这是“增加一层抽象”解决问题的一个案例。
+<p><img src="https://smartchaos.github.io//post-images/1555035175019.png" alt="字符编码过程"><br>
+通过这张图，可以比较容易了解到unicode和utf-8的关系，两者处于不同的概念层次上面，前者是形成CCS过程：将字符集里的字符映射成为一个整数, 这个整数又被成为Code Point。而后者则是将前面映射的整数映射成有限长度的比特值（CEF）的过程, 每个最小单元成为一个Code Unit。<br>
+值得一提的是CEF是逐渐演化出来的概念，早期的ASCII编码可以理解为既包含CCS过程也包含CEF过程。从解决问题的角度，这是“增加一层抽象”解决问题的一个案例。<br>
 详细了解可以参考：<a href="https://github.com/acmerfight/insight_python/blob/master/Unicode_and_Character_Sets.md">Insight Python-字符编码</a></p>
 ]]></content>
     </entry>
@@ -69,7 +69,7 @@
 <li>名字起得“大”而“远”，例如目前做的是一个服务集成的HUB服务，他的命名是“<strong>marketing</strong>”或者“<strong>stastics</strong>”再甚至是“<strong>marketing-data</strong>”。这些名字要么和当前服务没什么关系，要么涵盖的范围太广，缺乏真实的业务含义。初衷可能是想起一个将来“不后悔”的名字。</li>
 <li>用间接的业务目的为行为命名，例如有个枚举字段叫做<code>actionType</code>, 用于标识用户的行为模式，他定义的两个枚举一个叫做<code>lucky_draw</code>一个叫做<code>dispatch_award</code>。但实际的业务行为是，用户中奖之后通过不同的渠道“留资”（留资是得奖的必要条件之一）。但实际上他用了间接业务目的来命名，而业务目的会随不同时间、不同群体变化。这里记录发生了什么更为合适。</li>
 </ol>
-<p>深层次来看，这可能是思维习惯的问题：&quot;<strong>长远的目标干扰，导致不能很好立足于当下；对业务理解程度不足，导致对某些业务理解片面化。</strong>&quot;
+<p>深层次来看，这可能是思维习惯的问题：&quot;<strong>长远的目标干扰，导致不能很好立足于当下；对业务理解程度不足，导致对某些业务理解片面化。</strong>&quot;<br>
 平衡当下和远期目标确实是难题，但是骛远而不立足好当下是不可取的，不踏踏实实理解好业务场景并好好思考和抽象也是不足取的。</p>
 ]]></content>
     </entry>
@@ -131,8 +131,8 @@
 </code></pre>
 <p>这里需要说明的是midPrev记录前值，current记录当前值，总长是奇数长度的只需要关注current即可，否则需要用于加和求中间值，也就是<code>return oddFlag ? current : (midPrev + current) / 2.0</code></p>
 <blockquote>
-<p>Runtime: 24 ms, faster than 94.52% of Java online submissions for Median of Two Sorted Arrays.
-Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of Two Sorted Arrays.	
+<p>Runtime: 24 ms, faster than 94.52% of Java online submissions for Median of Two Sorted Arrays.<br>
+Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of Two Sorted Arrays.	<br>
 不幸的是，这个答案是错的！时间复杂度是O(m+n), 而不是O(log(m+n))。LeetCode居然没能够检测出来。</p>
 </blockquote>
 <h3 id="思路二-利用有序特征二分">思路二 利用有序特征二分</h3>
@@ -175,7 +175,7 @@ Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of T
 </code></pre>
 <p>结果实际上很不理想, 时间复杂度处于后1/3, 内存占用更没法看了。内存占用这点实际上是在预期之内的</p>
 <blockquote>
-<p>Runtime: 61 ms, faster than 22.26% of Java online submissions for Longest Substring Without Repeating Characters.
+<p>Runtime: 61 ms, faster than 22.26% of Java online submissions for Longest Substring Without Repeating Characters.<br>
 Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest Substring Without Repeating Characters.</p>
 </blockquote>
 <p>反思下这个算法性能浪费在哪里了？对于已经具备的计算结果利用率不高可能是关键问题。例如abcdeabc这个case， abcde作为一个整体是没有重复字符的，接下来遇到了字母a，我们可能只需要把“滑动窗口”向右平移就好了，而不是重置到字母b，重新计算bcde是否有重复。于是有了方案2</p>
@@ -200,8 +200,8 @@ Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest S
         return ans;
     }
 </code></pre>
-<p>这里最关键的是<code>i = Math.max(window.get(currChar), i);</code>这一句，这决定了窗口起始位置移动到哪里。
-这个执行的结果大致如图：
+<p>这里最关键的是<code>i = Math.max(window.get(currChar), i);</code>这一句，这决定了窗口起始位置移动到哪里。<br>
+这个执行的结果大致如图：<br>
 <img src="https://smartchaos.github.io//post-images/1560395089096.png" alt="">，内存占用排名在前10%</p>
 ]]></content>
     </entry>
@@ -242,7 +242,7 @@ Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest S
 </code></pre>
 <p>执行结果如下：</p>
 <blockquote>
-<p>Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.
+<p>Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.<br>
 Memory Usage: 48.2 MB, less than 17.15% of Java online submissions for Add Two Numbers.</p>
 </blockquote>
 <p>从结果来看广大网友似乎更多是在节省空间复杂度上下了功夫。</p>
@@ -274,7 +274,7 @@ Memory Usage: 48.2 MB, less than 17.15% of Java online submissions for Add Two N
 </code></pre>
 <p>结果在执行\空间占用上面确有优化：</p>
 <blockquote>
-<p>Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.
+<p>Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.<br>
 Memory Usage: 47.8 MB, less than 41.60% of Java online submissions for Add Two Numbers.</p>
 </blockquote>
 ]]></content>
@@ -306,7 +306,7 @@ Memory Usage: 47.8 MB, less than 41.60% of Java online submissions for Add Two N
     }
 </code></pre>
 <blockquote>
-<p>Runtime: 20 ms, faster than 41.25% of Java online submissions for Two Sum.
+<p>Runtime: 20 ms, faster than 41.25% of Java online submissions for Two Sum.<br>
 Memory Usage: 38.5 MB, less than 45.94% of Java online submissions for Two Sum.</p>
 </blockquote>
 <ol start="2">
@@ -327,7 +327,7 @@ Memory Usage: 38.5 MB, less than 45.94% of Java online submissions for Two Sum.<
     }
 </code></pre>
 <blockquote>
-<p>Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.
+<p>Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.<br>
 Memory Usage: 38.3 MB, less than 63.08% of Java online submissions for Two Sum.</p>
 </blockquote>
 <ol start="3">
@@ -346,7 +346,7 @@ Memory Usage: 38.3 MB, less than 63.08% of Java online submissions for Two Sum.<
     }
 </code></pre>
 <blockquote>
-<p>Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.
+<p>Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.<br>
 Memory Usage: 39.2 MB, less than 21.98% of Java online submissions for Two Sum.</p>
 </blockquote>
 <p>有意思的是，内存使用量比方案2多，会是什么原因呢？</p>
