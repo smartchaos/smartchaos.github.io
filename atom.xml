@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smartchaos.github.io/</id>
-    <title>Chaos Notes</title>
-    <updated>2019-07-25T02:38:53.173Z</updated>
+    <title>沉舟录</title>
+    <updated>2019-07-25T02:52:01.430Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smartchaos.github.io/"/>
     <link rel="self" href="https://smartchaos.github.io//atom.xml"/>
     <subtitle>沉舟侧畔千帆过，病树前头万木春</subtitle>
     <logo>https://smartchaos.github.io//images/avatar.png</logo>
     <icon>https://smartchaos.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2019, Chaos Notes</rights>
+    <rights>All rights reserved 2019, 沉舟录</rights>
     <entry>
         <title type="html"><![CDATA[中关村软件园孵化器楼停车攻略]]></title>
         <id>https://smartchaos.github.io//post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue</id>
