@@ -1,682 +1,332 @@
+
 <html>
+  <head>
+    
+<meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    Chaos Notes
-</title>
-<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1564020850057">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>Chaos Notes</title>
+<meta name="description" content="沉舟侧畔千帆过，病树前头万木春">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://smartchaos.github.io//favicon.ico?v=1564022155882">
 <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://smartchaos.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://smartchaos.github.io/">
-                <img class="avatar" src="https://smartchaos.github.io//images/avatar.png?v=1564020850057" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    Chaos Notes
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/qipa" class="menu">
-                                    奇葩
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/links" class="menu">
-                                    友链
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://smartchaos.github.io/">
+        <img class="avatar" src="https://smartchaos.github.io//images/avatar.png?v=1564022155882" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://smartchaos.github.io/">
+        <h1 class="site-title">Chaos Notes</h1>
+      </a>
     </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
         
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://smartchaos.github.io//post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue">
-                        中关村软件园孵化器楼停车攻略
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-05-21</time>
-                    
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            近期搬到新办公地点，是除了公共配套之外都很不错的办公区域。公共配套中尤为突出的是交通问题，作为开车一族（就我而言不开车更难受，几公里的距离需要倒3辆车+步行1km），用两天时间把周边转了个遍，整理出一个简单的停车攻略。
-软件园内
-这里的特点是每栋大厦自成体系，宁可空着车位也要守住自己的“一亩三分地”。所以内部基本上没有对外开放的停车场，唯一的清流是“数字山谷大厦”，
-
-停车费标准：无包月，大概200+车位。
-地面停车：7-19点1元/15分钟, 不封顶；19-次日7点3元/h, 不封顶。
-地库停车：7-19点1.5元/15分钟, 不封顶；19-次日7点4元/h，不封顶。
-
-除了这个选择之外，还可以停在东南侧环宇大厦往东的路边（算园区路边停车位），收费0.5元/15分钟，院区内公共停车位实际数量比较少，难以找到。
-周边停车场
-
-南面百旺绿茵停车场，价格4元每小时, 可以包月400，季付1000，车位比较充足，距离孵化器1.2km+。
-东大停车场（西），包月300，车位总体充足，步行到孵化器900米。从这个停车场出去后的后厂村路左转车道常年拥堵，一般需要2-3个红绿灯才能通过。
-西南侧软通动力南停车场，车入口接近浪潮大厦，东北角有个人行入口，200每月， 车位充足。需要注意的是这个停车场地面是土质的，下雨可能和泥。
-
-
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://smartchaos.github.io//post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://smartchaos.github.io//post/wei-wu-wei-xin">
-                        唯物唯心
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-04-23</time>
-                    
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            高中时一位历史老师在闲聊的时候说，“学了这么多年唯物主义，觉得自己在唯心主义路上越走越远了。”
-现在仔细体会一下，唯物主义用冷冰冰的、超越情感的视角来看事情是多么反人类。从自己内心出发去感悟这个世界则简单许多，负担也轻了很多。也许这是一种自我退化？
-彼时我是“历史科代表”，很喜欢这位年轻的老师。她名字很美，取自于诗经“燕燕于飞”。
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://smartchaos.github.io//post/wei-wu-wei-xin">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng">
-                        字符编码的过程
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-04-12</time>
-                    
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng" class="post-feature-image" style="background-image:url(https://smartchaos.github.io//post-images/zi-fu-bian-ma-de-guo-cheng.jpg) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            最近在看《Java核心技术-卷1-基础知识》，对于java使用的Utf-16编码有诸多疑惑，其中一点就来自于对字符编码过程的缺乏了解。计算机系统里面的字符编码大约涉及下面几个流程：
-
-通过这张图，可以比较容易了解到unicode和utf-8的关系，两者处于不同的概念层次上面，前者是形成CCS过程：将字符集里的字符映射成为一个整数, 这个整数又被成为Code Point。而后者则是将前面映射的整数映射成有限长度的比特值（CEF）的过程, 每个最小单元成为一个Code Unit。
-值得一提的是CEF是逐渐演化出来的概念，早期的ASCII编码可以理解为既包含CCS过程也包含CEF过程。从解决问题的角度，这是“增加一层抽象”解决问题的一个案例。
-详细了解可以参考：Insight Python-字符编码
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">
-                        关于命名的BAD CASE
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-04-02</time>
-                    
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            昨天在对接组内一个同事的接口的时候发现一个问题：他有些命名习惯很怪。
-
-名字起得“大”而“远”，例如目前做的是一个服务集成的HUB服务，他的命名是“marketing”或者“stastics”再甚至是“marketing-data”。这些名字要么和当前服务没什么关系，要么涵盖的范围太广，缺乏真实的业务含义。初衷可能是想起一个将来“不后悔”的名字。
-用间接的业务目的为行为命名，例如有个枚举字段叫做actionType, 用于标识用户的行为模式，他定义的两个枚举一个叫做lucky_draw一个叫做dispatch_award。但实际的业务行为是，用户中奖之后通过不同的渠道“留资”（留资是得奖的必要条件之一）。但实际上他用了间接业务目的来命名，而业务目的会随不同时间、不同群体变化。这里记录发生了什么更为合适。
-
-深层次来看，这可能是思维习惯的问题：&amp;quot;长远的目标干扰，导致不能很好立足于当下；对业务理解程度不足，导致对某些业务理解片面化。&amp;quot;
-平衡当下和远期目标确实是难题，但是骛远而不立足好当下是不可取的，不踏踏实实理解好业务场景并好好思考和抽象也是不足取的。
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao">
-                        关于表述和物化目标
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-03-27</time>
-                    
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao" class="post-feature-image" style="background-image:url(https://smartchaos.github.io//post-images/guan-yu-biao-shu-he-wu-hua-mu-biao.jpg) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            昨天在和人店技术沟通的时候发现对于一个崭新的“营销中台故事”，大家似乎没什么感知，反馈是营销这个主题太大了，并没有发掘落足点在哪里。而从我这边来看落足点似乎又很清晰：我们要帮助市场营销人员提效。这个提效在我们中台视角会有两个发展方向，一个是通过“范式化”，让工具和模式尽可能做到复用，满足多数营销场景诉求；第二个则是反馈机制的建立，我们希望通过建立ROI机制，让营销也能够迭代。
-问题出在哪里呢？没有表述清楚还是因为大家不熟悉这个领域需要物化？经过后面的讨论，我想可能是后者，大家需要将自己熟悉的现实场景映射到抽象的框架之中，但在听我讲PPT的时候却没能够建立好这种联系。
-这种情境是不是有好的改进方式呢？面向不同的用户群，表述方式需要作出明显区分，否则难免会出现理解的断层。可以想到的正面例子是肯尼迪总统的目标表述：“在未来10年内，把一个美国人送上月球，并使他重返地面。”这个目标面向的是非专业领域的广罗大众，这句话做到了清晰易懂易于传播。而我似乎也需要做一个这样的物化表述，也许是：在两年之内，营销中台要让所有的市场运营部门裁员50%？
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">
-                        leetcode刷题记-004
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-03-08</time>
-                    
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004" class="post-feature-image" style="background-image:url(https://smartchaos.github.io//post-images/leetcode-shua-ti-ji-004.png) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            问题
-两个有序数组寻找中间值问题
-解题思路
-思路一， 借鉴有序链表合并的思路
-虽然leetcode标记为困难。但实际上很容易会想到“有序链表合并”的思路，在这个思路的基础之上记录下来中间值位置。对于中间值位置，由于在两个数组的长度之和是偶数的时候，需要取中间前后的两个数值计算中间值，所以需要记录前后两个值。附代码：
- public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-         int totalLength = nums1.length + nums2.length;
-        boolean oddFlag = totalLength % 2 == 1;
-        final int middleVal = oddFlag ? totalLength / 2 + 1 : totalLength / 2 + 1;
-
-        //navigate likes two linklists merging
-        int countIndex = 1, idx1 = 0, idx2 = 0;
-        int midPrev = 0, current = 0;
-
-        while (true) {
-            midPrev = current;
-            if (idx1 &amp;lt; nums1.length &amp;amp;&amp;amp; idx2 &amp;lt; nums2.length) {
-                if (nums1[idx1] &amp;lt;= nums2[idx2]) {
-                    current = nums1[idx1];
-                    idx1++;
-                } else {
-                    current = nums2[idx2];
-                    idx2++;
-                }
-            } else if (idx1 &amp;gt;= nums1.length) {
-                current = nums2[idx2];
-                idx2++;
-            } else {
-                current = nums1[idx1];
-                idx1++;
-            }
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
         
-            if (countIndex == middleVal) {
-                return oddFlag ? current : (midPrev + current) / 2.0;
-            }
-            countIndex++;
-        }
-    }
-
-这里需要说明的是midPrev记录前值，current记录当前值，总长是奇数长度的只需要关注current即可，否则需要用于加和求中间值，也就是return oddFlag ? current : (midPrev + current) / 2.0
-
-Runtime: 24 ms, faster than 94.52% of Java online submissions for Median of Two Sorted Arrays.
-Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of Two Sorted Arrays.	
-不幸的是，这个答案是错的！时间复杂度是O(m+n), 而不是O(log(m+n))。LeetCode居然没能够检测出来。
-
-思路二 利用有序特征二分
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">
-                        leetcode刷题记-003
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-03-05</time>
-                    
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            问题描述
-最大不重复子串问题
-解题思路
-
-方案一：借助Set判断是否有重复， 通过游标j巡回判断， 实际上是一种暴力破解的思路
-
-   public static int lengthOfLongestSubstring(String s) {
-        if (s.length() == 0) {
-            return 0;
-        }
-        int lengthOfRes = 0;
-        Set&amp;lt;Character&amp;gt; set = new HashSet&amp;lt;&amp;gt;();
-
-        int length = s.length();
-        for (int i = 0; i &amp;lt; length; i++) {
-            set.add(s.charAt(i));
-            int j = i + 1;
-            while (j &amp;lt; s.length() &amp;amp;&amp;amp; !set.contains(s.charAt(j))) {
-                set.add(s.charAt(j));
-                if (j - i &amp;gt; lengthOfRes) {
-                    lengthOfRes = j - i;
-                }
-                j++;
-            }
-            set.clear();
-        }
-        return lengthOfRes + 1;
-    }
-
-结果实际上很不理想, 时间复杂度处于后1/3, 内存占用更没法看了。内存占用这点实际上是在预期之内的
-
-Runtime: 61 ms, faster than 22.26% of Java online submissions for Longest Substring Without Repeating Characters.
-Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest Substring Without Repeating Characters.
-
-反思下这个算法性能浪费在哪里了？对于已经具备的计算结果利用率不高可能是关键问题。例如abcdeabc这个case， abcde作为一个整体是没有重复字符的，接下来遇到了字母a，我们可能只需要把“滑动窗口”向右平移就好了，而不是重置到字母b，重新计算bcde是否有重复。于是有了方案2
-
-方案二：
-
-public int lengthOfLongestSubstring(String s) {
-        int length = s.length();
-        if (length &amp;lt;= 1) {
-            return length;
-        }
-        int ans = 0;
-        Map&amp;lt;Character, Integer&amp;gt; window = new HashMap&amp;lt;&amp;gt;(length);
-        for (int i = 0, j = 0; j &amp;lt; length; j++) {
-            char currChar = s.charAt(j);
-            if (window.containsKey(currChar)) {
-                i = Math.max(window.get(currChar)+1, i);
-            }
-            ans = Math.max(ans, j - i + 1);
-            window.put(currChar, j);
-        }
-        return ans;
-    }
-
-这里最关键的是i = Math.max(window.get(currChar), i);这一句，这决定了窗口起始位置移动到哪里。
-这个执行的结果大致如图：
-，内存占用排名在前10%
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">
-                        leetcode刷题记-002
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-03-05</time>
-                    
-                        <a href="https://smartchaos.github.io//tag/wiXglFNzq" class="post-tag i-tag
-                            i-tag-other_2">
-            #leetcode
-        </a>
-                        
-                        <a href="https://smartchaos.github.io//tag/eH85Ma4r0" class="post-tag i-tag
-                            i-tag-other_3">
-            #java
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            问题
-两个链表相加问题，情境类似于十进制大数加法
-解决方案
-原始方案
-问题难点在于边界，直接上代码
-public ListNode addTwoNumbers(ListNode l1, ListNode l2) {int carryFlag = 0, plusHolder;
-        ListNode res = null;
-        ListNode curPos = null;
-        while (true) {
-            plusHolder = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + carryFlag;
-            carryFlag = plusHolder / 10;
-            ListNode newNode = new ListNode(carryFlag == 0 ? plusHolder : (plusHolder - 10));
-            if (res == null) {
-                res = newNode;
-                curPos = res;
-            } else {
-                curPos.next = newNode;
-                curPos = curPos.next;
-            }
-            if (l1 != null)
-                l1 = l1.next;
-            if (l2 != null)
-                l2 = l2.next;
-            if (l1 == null &amp;amp;&amp;amp; l2 == null &amp;amp;&amp;amp; carryFlag != 1) {
-                return res;
-            }
-        }
-    }
-
-执行结果如下：
-
-Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.
-Memory Usage: 48.2 MB, less than 17.15% of Java online submissions for Add Two Numbers.
-
-从结果来看广大网友似乎更多是在节省空间复杂度上下了功夫。
-改进思路，
-是不是可以利用L1或者L2保存结果以节省空间呢？也就是以常见的merge链表的思路去做
-public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int carryFlag = 0, plusHolder;
-        ListNode prevPos = l1;
-        ListNode headPos = l1;
-        while (true) {
-            plusHolder = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + carryFlag;
-            carryFlag = plusHolder / 10;
-            if (l1 == null) {
-                ListNode newNode = new ListNode(carryFlag == 0 ? plusHolder : (plusHolder - 10));
-                prevPos.next = newNode;
-                l1 = prevPos.next;
-            } else {
-                l1.val = carryFlag == 0 ? plusHolder : (plusHolder - 10);
-            }
-            prevPos = l1;
-            l1 = l1.next;
-            if (l2 != null)
-                l2 = l2.next;
-            if (l1 == null &amp;amp;&amp;amp; l2 == null &amp;amp;&amp;amp; carryFlag != 1) {
-                return headPos;
-            }
-        }
-    }
-
-结果在执行\空间占用上面确有优化：
-
-Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.
-Memory Usage: 47.8 MB, less than 41.60% of Java online submissions for Add Two Numbers.
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/qipa" class="menu purple-link">
+            奇葩
+          </a>
+        
+      
+        
+          <a href="/post/links" class="menu purple-link">
+            友链
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
 
 
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-001">
-                        leetcode刷题记-001
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2019-03-05</time>
-                    
-                        <a href="https://smartchaos.github.io//tag/wiXglFNzq" class="post-tag i-tag
-                            i-tag-primary">
-            #leetcode
-        </a>
-                        
-                        <a href="https://smartchaos.github.io//tag/eH85Ma4r0" class="post-tag i-tag
-                            i-tag-other_1">
-            #java
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            问题：
-两数相加等于目标值
-解题思路
-
-容易想到的是双层循环, 时间复杂度O(n^2)。需要关注的是题目提示只有一个答案，并且暗示不该出现自己和自己相加的情形（影响到边界处理条件）。代码如下：
-
-public int[] twoSum(int[] nums, int target) {
-        int j = nums.length - 1;
-        do {
-            int i = 0;
-            while (i &amp;lt; j) {
-                if (nums[i] + nums[j] == target) {
-                    return new int[]{i, j};
-                }
-                i++;
-            }
-        } while (--j &amp;gt; 0);
-        new IllegalArgumentException(&amp;quot;No two sum solution&amp;quot;);
-    }
-
-
-Runtime: 20 ms, faster than 41.25% of Java online submissions for Two Sum.
-Memory Usage: 38.5 MB, less than 45.94% of Java online submissions for Two Sum.
-
-
-容易想到的还有先用target与数组里的值做差，再借助Map这种数据结构, 遍历原数组寻找“配对”值下标。时间复杂度变为O(n)
-
-public int[] twoSum(int[] nums, int target) {
-        Map&amp;lt;Integer, Integer&amp;gt; diffMap = new HashMap&amp;lt;&amp;gt;(nums.length);
-        for (int i = 0; i &amp;lt; nums.length; i++) {
-            diffMap.put(target - nums[i], i);
-        }
-        for (int i = 0; i &amp;lt; nums.length; i++) {
-            Integer oriIndex = diffMap.get(nums[i]);
-            if (oriIndex != null &amp;amp;&amp;amp; i != oriIndex) {
-                return new int[]{i, oriIndex};
-            }
-        }
-        return new int[2];
-    }
-
-
-Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.
-Memory Usage: 38.3 MB, less than 63.08% of Java online submissions for Two Sum.
-
-
-看了官方的solution集，发现还有更加紧凑的解法，只需要一次循环。思路是边循环边设置并检查map，如果加和等于target则终止，最坏情况是第一个元素和最后一个元素匹配。
-
-public int[] twoSum(int[] nums, int target) {
-        Map&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;(nums.length);
-        for (int i = 0; i &amp;lt; nums.length; i++) {
-            int complement = target - nums[i];
-            if (map.containsKey(complement)) {
-                return new int[]{map.get(complement), i};
-            }
-            map.put(nums[i], i);
-        }
-        throw new IllegalArgumentException(&amp;quot;No two sum solution&amp;quot;);
-    }
-
-
-Runtime: 3 ms, faster than 99.77% of Java online submissions for Two Sum.
-Memory Usage: 39.2 MB, less than 21.98% of Java online submissions for Two Sum.
-
-有意思的是，内存使用量比方案2多，会是什么原因呢？
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-001">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-                <!-- 翻页 -->
-                
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
-
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://smartchaos.github.io//images/avatar.png?v=1564020850057)">
-        </div>
-        <h1 class="id_card-title">
-            Chaos Notes
-        </h1>
-        <h2 class="id_card-description">
-            沉舟侧畔千帆过，病树前头万木春
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                    <!-- facebook -->
-                                    
-
-        </div>
+      <div class="content-container">
+        
+        
+<section class="post-item">
+    <div class="content">
+      <a href="https://smartchaos.github.io//post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue">
+        <h2 class="post-title">中关村软件园孵化器楼停车攻略</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-05-21</span>
+        
+      </div>
     </div>
     
+  </section>
 
-                        <!-- 公告栏 -->
-                        
+<section class="post-item">
+    <div class="content">
+      <a href="https://smartchaos.github.io//post/wei-wu-wei-xin">
+        <h2 class="post-title">唯物唯心</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-04-23</span>
+        
+      </div>
+    </div>
+    
+  </section>
 
-                </div>
-            </div>
+<section class="post-item">
+    <div class="content">
+      <a href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng">
+        <h2 class="post-title">字符编码的过程</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-04-12</span>
+        
+      </div>
+    </div>
+    
+      <a href="https://smartchaos.github.io//post/zi-fu-bian-ma-de-guo-cheng">
+        <div class="feature-container" style="background-image: url('https://smartchaos.github.io//post-images/zi-fu-bian-ma-de-guo-cheng.jpg')">
+        </div>
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://smartchaos.github.io//post/guan-yu-ming-ming-de-bad-case">
+        <h2 class="post-title">关于命名的BAD CASE</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-04-02</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao">
+        <h2 class="post-title">关于表述和物化目标</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-03-27</span>
+        
+      </div>
+    </div>
+    
+      <a href="https://smartchaos.github.io//post/guan-yu-biao-shu-he-wu-hua-mu-biao">
+        <div class="feature-container" style="background-image: url('https://smartchaos.github.io//post-images/guan-yu-biao-shu-he-wu-hua-mu-biao.jpg')">
+        </div>
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">
+        <h2 class="post-title">leetcode刷题记-004</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-03-08</span>
+        
+      </div>
+    </div>
+    
+      <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-004">
+        <div class="feature-container" style="background-image: url('https://smartchaos.github.io//post-images/leetcode-shua-ti-ji-004.png')">
+        </div>
+      </a>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-003">
+        <h2 class="post-title">leetcode刷题记-003</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-03-05</span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-002">
+        <h2 class="post-title">leetcode刷题记-002</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-03-05</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://smartchaos.github.io//tag/wiXglFNzq">
+                leetcode
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://smartchaos.github.io//tag/eH85Ma4r0">
+                java
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
+
+<section class="post-item">
+    <div class="content">
+      <a href="https://smartchaos.github.io//post/leetcode-shua-ti-ji-001">
+        <h2 class="post-title">leetcode刷题记-001</h2>
+      </a>
+      <div class="post-abstract">
+        
+      </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2019-03-05</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://smartchaos.github.io//tag/wiXglFNzq">
+                leetcode
+                
+                  ，
+                
+              </a>
+            
+              <a href="https://smartchaos.github.io//tag/eH85Ma4r0">
+                java
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
 
 
-
-            <div class="site-footer">
-  <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg" alt="LICENSE"></a> | 
-  <a class="rss" href="https://smartchaos.github.io//atom.xml" target="_blank">RSS</a>
+<div class="pagination-container">
+  
+  
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
+
+      </div>
+
+      <div class="site-footer">
+  <div class="slogan">沉舟侧畔千帆过，病树前头万木春</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  <a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg" alt="LICENSE"></a>
+</div>
+
 
     </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-</body>
+    <script type="application/javascript">
 
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
 </html>
