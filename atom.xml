@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smartchaos.github.io/</id>
     <title>沉舟录</title>
-    <updated>2020-01-06T03:22:56.107Z</updated>
+    <updated>2020-01-06T03:23:34.890Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smartchaos.github.io/"/>
     <link rel="self" href="https://smartchaos.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, 沉舟录</rights>
     <entry>
         <title type="html"><![CDATA[一文读懂Java的Classloader机制]]></title>
-        <id>https://smartchaos.github.io/post/yi-wen-du-dong-java-de-classloader-ji-zhi</id>
-        <link href="https://smartchaos.github.io/post/yi-wen-du-dong-java-de-classloader-ji-zhi">
+        <id>https://smartchaos.github.io/yi-wen-du-dong-java-de-classloader-ji-zhi</id>
+        <link href="https://smartchaos.github.io/yi-wen-du-dong-java-de-classloader-ji-zhi">
         </link>
         <updated>2019-07-25T02:53:31.000Z</updated>
         <content type="html"><![CDATA[<h2 id="java-classloader是怎样定义的">Java Classloader是怎样定义的</h2>
@@ -36,8 +36,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[中关村软件园孵化器楼停车攻略]]></title>
-        <id>https://smartchaos.github.io/post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue</id>
-        <link href="https://smartchaos.github.io/post/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue">
+        <id>https://smartchaos.github.io/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue</id>
+        <link href="https://smartchaos.github.io/zhong-guan-cun-ruan-jian-yuan-yi-qi-xi-nan-ting-che-gong-lue">
         </link>
         <updated>2019-05-21T00:30:15.000Z</updated>
         <content type="html"><![CDATA[<p>近期搬到新办公地点，是除了公共配套之外都很不错的办公区域。公共配套中尤为突出的是交通问题，作为开车一族（就我而言不开车更难受，几公里的距离需要倒3辆车+步行1km），用两天时间把周边转了个遍，整理出一个简单的停车攻略。</p>
@@ -60,8 +60,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[唯物唯心]]></title>
-        <id>https://smartchaos.github.io/post/wei-wu-wei-xin</id>
-        <link href="https://smartchaos.github.io/post/wei-wu-wei-xin">
+        <id>https://smartchaos.github.io/wei-wu-wei-xin</id>
+        <link href="https://smartchaos.github.io/wei-wu-wei-xin">
         </link>
         <updated>2019-04-23T07:17:20.000Z</updated>
         <content type="html"><![CDATA[<p>高中时一位历史老师在闲聊的时候说，“学了这么多年唯物主义，觉得自己在唯心主义路上越走越远了。”</p>
@@ -71,8 +71,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[字符编码的过程]]></title>
-        <id>https://smartchaos.github.io/post/zi-fu-bian-ma-de-guo-cheng</id>
-        <link href="https://smartchaos.github.io/post/zi-fu-bian-ma-de-guo-cheng">
+        <id>https://smartchaos.github.io/zi-fu-bian-ma-de-guo-cheng</id>
+        <link href="https://smartchaos.github.io/zi-fu-bian-ma-de-guo-cheng">
         </link>
         <updated>2019-04-12T02:11:57.000Z</updated>
         <content type="html"><![CDATA[<p>最近在看《Java核心技术-卷1-基础知识》，对于java使用的Utf-16编码有诸多疑惑，其中一点就来自于对字符编码过程的缺乏了解。计算机系统里面的字符编码大约涉及下面几个流程：</p>
@@ -84,8 +84,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[关于命名的BAD CASE]]></title>
-        <id>https://smartchaos.github.io/post/guan-yu-ming-ming-de-bad-case</id>
-        <link href="https://smartchaos.github.io/post/guan-yu-ming-ming-de-bad-case">
+        <id>https://smartchaos.github.io/guan-yu-ming-ming-de-bad-case</id>
+        <link href="https://smartchaos.github.io/guan-yu-ming-ming-de-bad-case">
         </link>
         <updated>2019-04-02T00:00:46.000Z</updated>
         <content type="html"><![CDATA[<p>昨天在对接组内一个同事的接口的时候发现一个问题：他有些命名习惯很怪。</p>
@@ -99,8 +99,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[关于表述和物化目标]]></title>
-        <id>https://smartchaos.github.io/post/guan-yu-biao-shu-he-wu-hua-mu-biao</id>
-        <link href="https://smartchaos.github.io/post/guan-yu-biao-shu-he-wu-hua-mu-biao">
+        <id>https://smartchaos.github.io/guan-yu-biao-shu-he-wu-hua-mu-biao</id>
+        <link href="https://smartchaos.github.io/guan-yu-biao-shu-he-wu-hua-mu-biao">
         </link>
         <updated>2019-03-26T23:48:08.000Z</updated>
         <content type="html"><![CDATA[<p>昨天在和人店技术沟通的时候发现对于一个崭新的“营销中台故事”，大家似乎没什么感知，反馈是营销这个主题太大了，并没有发掘落足点在哪里。而从我这边来看落足点似乎又很清晰：我们要帮助市场营销人员提效。这个提效在我们中台视角会有两个发展方向，一个是通过“范式化”，让工具和模式尽可能做到复用，满足多数营销场景诉求；第二个则是反馈机制的建立，我们希望通过建立ROI机制，让营销也能够迭代。</p>
@@ -110,8 +110,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[leetcode刷题记-004]]></title>
-        <id>https://smartchaos.github.io/post/leetcode-shua-ti-ji-004</id>
-        <link href="https://smartchaos.github.io/post/leetcode-shua-ti-ji-004">
+        <id>https://smartchaos.github.io/leetcode-shua-ti-ji-004</id>
+        <link href="https://smartchaos.github.io/leetcode-shua-ti-ji-004">
         </link>
         <updated>2019-03-08T00:18:53.000Z</updated>
         <content type="html"><![CDATA[<h2 id="问题">问题</h2>
@@ -164,8 +164,8 @@ Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of T
     </entry>
     <entry>
         <title type="html"><![CDATA[leetcode刷题记-003]]></title>
-        <id>https://smartchaos.github.io/post/leetcode-shua-ti-ji-003</id>
-        <link href="https://smartchaos.github.io/post/leetcode-shua-ti-ji-003">
+        <id>https://smartchaos.github.io/leetcode-shua-ti-ji-003</id>
+        <link href="https://smartchaos.github.io/leetcode-shua-ti-ji-003">
         </link>
         <updated>2019-03-05T09:07:34.000Z</updated>
         <content type="html"><![CDATA[<h2 id="问题描述">问题描述</h2>
@@ -231,8 +231,8 @@ Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest S
     </entry>
     <entry>
         <title type="html"><![CDATA[leetcode刷题记-002]]></title>
-        <id>https://smartchaos.github.io/post/leetcode-shua-ti-ji-002</id>
-        <link href="https://smartchaos.github.io/post/leetcode-shua-ti-ji-002">
+        <id>https://smartchaos.github.io/leetcode-shua-ti-ji-002</id>
+        <link href="https://smartchaos.github.io/leetcode-shua-ti-ji-002">
         </link>
         <updated>2019-03-05T05:08:25.000Z</updated>
         <content type="html"><![CDATA[<h2 id="问题">问题</h2>
@@ -305,8 +305,8 @@ Memory Usage: 47.8 MB, less than 41.60% of Java online submissions for Add Two N
     </entry>
     <entry>
         <title type="html"><![CDATA[leetcode刷题记-001]]></title>
-        <id>https://smartchaos.github.io/post/leetcode-shua-ti-ji-001</id>
-        <link href="https://smartchaos.github.io/post/leetcode-shua-ti-ji-001">
+        <id>https://smartchaos.github.io/leetcode-shua-ti-ji-001</id>
+        <link href="https://smartchaos.github.io/leetcode-shua-ti-ji-001">
         </link>
         <updated>2019-03-05T02:09:41.000Z</updated>
         <content type="html"><![CDATA[<h2 id="问题">问题：</h2>
