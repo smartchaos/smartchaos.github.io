@@ -886,7 +886,7 @@ body.mdui-locked {
 }
 .mdui-typo caption,
 .mdui-typo th {
-  text-align: left;
+  text-align: center;
 }
 .mdui-typo q:after,
 .mdui-typo q:before {
@@ -2742,7 +2742,7 @@ th,
 td {
   text-align: center;
   padding: 5px;
-  border: 1px solid #046e1f;
+  border: 1px solid #2c557d;
 }
 tr:nth-child(even) {
   background-color: #F7FAFC;
