@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smartchaos.github.io/</id>
     <title>沉舟录</title>
-    <updated>2020-01-08T08:48:30.157Z</updated>
+    <updated>2020-01-08T08:49:38.746Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smartchaos.github.io/"/>
     <link rel="self" href="https://smartchaos.github.io/atom.xml"/>
@@ -16,25 +16,13 @@
         <link href="https://smartchaos.github.io/rOIE_LP-e">
         </link>
         <updated>2020-01-08T08:25:34.000Z</updated>
-        <content type="html"><![CDATA[<ol>
-<li><a href="https://mp.weixin.qq.com/s/2Cs8ybu5Kg9QYr5Jgyu6VA">毕业10年才懂，会升层思考，工作有多轻松</a>
-<ul>
-<li>问题的本质是事物的矛盾，准确定义问题是成功的开始。</li>
-<li>准确定义问题需要从定性和定量两个角度进行，核心关注的是主要/次要、紧急/不紧急，其中重要性往往用预期和现实的落差衡量，需要通过度量的方式明晰。</li>
-<li>问题一般可以划分为三类：恢复原状型、防范风险型、追求理想型，不同类别的问题需要采用不同的手段处理。</li>
-<li>问题定义里常见问题是<strong>把方法和手段当问题</strong>、<strong>误把挑战当问题</strong>、<strong>思考问题缺少时间维度</strong></li>
-<li>
-<blockquote>
-<blockquote>
-<p>升层思考:  我们不能只局限于问题本身，还需要看到问题背后的问题，然后才能更容易的找到更多的解决方案。缺乏升层思考的升维思考是不完整的自顶向下。</p>
-</blockquote>
-</blockquote>
-</li>
-<li>升层思考问题，升维思考手段/方法。</li>
-</ul>
-</li>
-<li></li>
-</ol>
+        <content type="html"><![CDATA[<p><a href="https://mp.weixin.qq.com/s/2Cs8ybu5Kg9QYr5Jgyu6VA">毕业10年才懂，会升层思考，工作有多轻松</a><br>
+* 问题的本质是事物的矛盾，准确定义问题是成功的开始。<br>
+* 准确定义问题需要从定性和定量两个角度进行，核心关注的是主要/次要、紧急/不紧急，其中重要性往往用预期和现实的落差衡量，需要通过度量的方式明晰。<br>
+* 问题一般可以划分为三类：恢复原状型、防范风险型、追求理想型，不同类别的问题需要采用不同的手段处理。<br>
+* 问题定义里常见问题是<strong>把方法和手段当问题</strong>、<strong>误把挑战当问题</strong>、<strong>思考问题缺少时间维度</strong><br>
+*  &gt; 升层思考:  我们不能只局限于问题本身，还需要看到问题背后的问题，然后才能更容易的找到更多的解决方案。缺乏升层思考的升维思考是不完整的自顶向下。<br>
+*  升层思考问题，升维思考手段/方法。</p>
 ]]></content>
     </entry>
     <entry>
