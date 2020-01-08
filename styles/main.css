@@ -2740,9 +2740,9 @@ table {
 }
 th,
 td {
-  text-align: left;
-  padding: 8px;
-  border: 1px solid #059b2a;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #046e1f;
 }
 tr:nth-child(even) {
   background-color: #F7FAFC;
