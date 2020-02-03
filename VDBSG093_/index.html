@@ -3,7 +3,7 @@
         <head>
         <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
         <meta charset="utf-8">
-        <title>2020春节回乡见闻 | 沉舟录</title>
+        <title>Swagger通过example属性Mock复杂数据 | 沉舟录</title>
         <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
         <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
         <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
@@ -70,27 +70,32 @@
                 <div class="mdui-row">
                         <div class="mdui-col-md-8 mdui-col-offset-md-2 ">
                                 <article class="mdui-p-a-2 post animated fadeIn" style="animation-delay: 0.8s;animation-duration: 2s">
-                                    <div class="post-title  mdui-m-b-1">2020春节回乡见闻</div>
-                                    <div class="mdui-typo-body-2 mdui-m-b-2" datetime="2020-02-02 14:09:09">2020-02-02 / 1 min read</div>
-                                    <div class="mdui-m-b-2 mdui-typo post-neirong"><h2 id="经济篇">经济篇</h2>
-<h3 id="大堂兄的新零售">大堂兄的“新零售”</h3>
-<h3 id="三堂兄的大理石生意">三堂兄的大理石生意</h3>
-<h2 id="生活">生活</h2>
-<h3 id="新农村基础设施建设">新农村基础设施建设</h3>
-<h3 id=""></h3>
-<h2 id="疫情">疫情</h2>
-<h3 id="封村">封村</h3>
-<h3 id="人情">人情</h3>
-<h2 id="启发">启发</h2>
+                                    <div class="post-title  mdui-m-b-1">Swagger通过example属性Mock复杂数据</div>
+                                    <div class="mdui-typo-body-2 mdui-m-b-2" datetime="2020-02-03 20:51:31">2020-02-03 / 1 min read</div>
+                                    <div class="mdui-m-b-2 mdui-typo post-neirong"><p>一般来说，通过example属性传递常规类型数据是比较容易的，例如字符串、数值等，直接填写值即可，对于复杂类型，笔者整理了一些经验可供分享。</p>
+<ol>
+<li>Date类型，设置dataType为Date, example填写参照时间，例如<pre><code class="language-java">@ApiModelProperty(value = &quot;目标送达时间&quot;, dataType = &quot;Date&quot;, example = &quot;2019-10-20 10:00:00&quot;)
+ private String targetArriveTime;
+</code></pre>
+</li>
+<li>List和Set的简单类型，设置dataType为相应的类型，例如<code>java.lang.Xx</code>, example里面填写值<code>[str1, str2, str3]</code>即可</li>
+<li>List传递复杂类型，可以直接填写dataType， 无需设置example, 这个值的获取可以从具体的类里面取得场景2可以认为是特例。例如<pre><code class="language-java">/**
+  * 商品列表
+  */
+ @ApiModelProperty(value = &quot;配送商品列表&quot;, dataType = &quot;com.ke.utopia.scm.tms.base.vo.ProductItem&quot;)
+ private List&lt;ProductItem&gt; productItemList;
+</code></pre>
+</li>
+</ol>
 </div>
                                     <div class="mdui-divider mdui-m-b-2"></div>
                                     <div class="mdui-row-xs-2 post-fenye">
                                        
-                                        <div class="mdui-col"> <div class="mdui-text-left"><a href="https://smartchaos.github.io/VDBSG093_">Swagger通过example属性Mock复杂数据</a></div></div>
+                                        <div class="mdui-col"> </div>
                                         
 
                                         
-                                        <div class="mdui-col"><div class="mdui-text-right "><a href="https://smartchaos.github.io/rOIE_LP-e">[Read Digest] 2020-01</a></div> </div>
+                                        <div class="mdui-col"><div class="mdui-text-right "><a href="https://smartchaos.github.io/woc3iVrWw">2020春节回乡见闻</a></div> </div>
                                        
                                       </div>
                                    
