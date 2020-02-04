@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smartchaos.github.io/</id>
     <title>沉舟录</title>
-    <updated>2020-02-03T13:15:23.780Z</updated>
+    <updated>2020-02-04T03:41:45.682Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smartchaos.github.io/"/>
     <link rel="self" href="https://smartchaos.github.io/atom.xml"/>
@@ -22,7 +22,10 @@
  private String targetArriveTime;
 </code></pre>
 </li>
-<li>List和Set的简单类型，设置dataType为相应的类型，例如<code>java.lang.Xx</code>, example里面填写值<code>[str1, str2, str3]</code>即可</li>
+<li>List和Set的简单类型，设置dataType为相应的类型，例如<code>java.lang.Xx</code>, example里面填写值<code>[str1, str2, str3]</code>即可, 例如Integer的列表可以这样：<pre><code class="language-java">@ApiModelProperty(name = &quot;测试id&quot;, required = false, dataType = &quot;java.lang.Integer&quot;, example = &quot;[1,2,3]&quot;)
+ private List&lt;Integer&gt; testIds;
+</code></pre>
+</li>
 <li>List传递复杂类型，可以直接填写dataType， 无需设置example, 这个值的获取可以从具体的类里面取得场景2可以认为是特例。例如<pre><code class="language-java">/**
   * 商品列表
   */
