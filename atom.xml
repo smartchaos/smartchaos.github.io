@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smartchaos.github.io/</id>
     <title>沉舟录</title>
-    <updated>2020-06-28T13:10:01.830Z</updated>
+    <updated>2020-09-19T13:53:02.367Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smartchaos.github.io/"/>
     <link rel="self" href="https://smartchaos.github.io/atom.xml"/>
@@ -98,15 +98,8 @@
 所以：贝壳找房不是“裁判员 + 运动员”， 而是提供了“足球场和运行规则”</li>
 </ol>
 <h2 id="我们需要怎样的能力模型">我们需要怎样的能力模型</h2>
-<p>祝旭巍：产业互联网开发人员的四力模型<br>
-<img src="https://i.loli.net/2020/06/28/sV1ZMSvAocFd9nU.png" alt="image-20200628181535442" loading="lazy"><br>
-新装修整理的技术价值观：</p>
-<blockquote>
-<p>能冲锋，敢担当；有承诺，定做到；</p>
-<p>多调研，深思考；做拆解，以细致；</p>
-<p>乐协作，愿分享；求卓越，寻突破。<br>
-参考资料：</p>
-</blockquote>
+<p>祝旭巍：产业互联网开发人员的五力模型<br>
+业务力、交付力、技术力、组织力、创新力</p>
 <ol>
 <li>https://zhuanlan.zhihu.com/p/74853828</li>
 <li><strong>张梓钧</strong>：<a href="https://m.hbrchina.org/article/175">产业互联网蓝海前景的四大方向（哈佛商业评论）</a></li>
