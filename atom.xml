@@ -2,14 +2,37 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smartchaos.github.io/</id>
     <title>沉舟录</title>
-    <updated>2020-09-19T13:53:02.367Z</updated>
+    <updated>2021-03-12T15:04:34.542Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smartchaos.github.io/"/>
     <link rel="self" href="https://smartchaos.github.io/atom.xml"/>
     <subtitle>沉舟侧畔千帆过，病树前头万木春</subtitle>
     <logo>https://smartchaos.github.io/images/avatar.png</logo>
     <icon>https://smartchaos.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 沉舟录</rights>
+    <rights>All rights reserved 2021, 沉舟录</rights>
+    <entry>
+        <title type="html"><![CDATA[自卑和自信的循环]]></title>
+        <id>https://smartchaos.github.io/hFtPNrysn/</id>
+        <link href="https://smartchaos.github.io/hFtPNrysn/">
+        </link>
+        <updated>2021-03-12T14:51:42.000Z</updated>
+        <content type="html"><![CDATA[<p>最近一段时间总是陷入到自卑到自信、自信到自卑循环往复的过程里面。<br>
+一时间会觉得自己在供应链的领域里面的认知都在“皮毛”，一时间又会觉得洞悉了这个行业的本质。<br>
+一时间会觉得自己团队带的一团糟，组织文化不积极、将近30人的队伍了还需要自己去干预技术架构，不做点什么团队就要往下游漂，一会儿又觉得团队蒸蒸日上、每个人在这个组织里都有目标、有空间、有所得，相比兄弟团队少做了很多无效的工作、少加很多班。</p>
+<p>除此之外，近期工作的体感也挺差的，影响了心绪的平衡。<br>
+一方面是人事部门总出幺蛾子，晋升机制说调就调、招聘门槛说提就提，每次都无法成为规则的受益者；另一方面，团队之间因边界问题导致的情绪型冲突不断——中台越界让业务难受的问题尤为突出。</p>
+<p>晚上和严老板说“心累”，这是真的。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2020年度总结]]></title>
+        <id>https://smartchaos.github.io/uyuq5niX8/</id>
+        <link href="https://smartchaos.github.io/uyuq5niX8/">
+        </link>
+        <updated>2021-01-05T07:44:32.000Z</updated>
+        <content type="html"><![CDATA[<p>to add</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2020.6产业互联网主题分享]]></title>
         <id>https://smartchaos.github.io/DLGTMZKod/</id>
@@ -397,147 +420,6 @@ Memory Usage: 49 MB, less than 58.57% of Java online submissions for Median of T
 不幸的是，这个答案是错的！时间复杂度是O(m+n), 而不是O(log(m+n))。LeetCode居然没能够检测出来。</p>
 </blockquote>
 <h3 id="思路二-利用有序特征二分">思路二 利用有序特征二分</h3>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[leetcode刷题记-003]]></title>
-        <id>https://smartchaos.github.io/leetcode-shua-ti-ji-003/</id>
-        <link href="https://smartchaos.github.io/leetcode-shua-ti-ji-003/">
-        </link>
-        <updated>2019-03-05T09:07:34.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="问题描述">问题描述</h2>
-<p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">最大不重复子串问题</a></p>
-<h2 id="解题思路">解题思路</h2>
-<ol>
-<li>方案一：借助Set判断是否有重复， 通过游标j巡回判断， 实际上是一种暴力破解的思路</li>
-</ol>
-<pre><code class="language-java">   public static int lengthOfLongestSubstring(String s) {
-        if (s.length() == 0) {
-            return 0;
-        }
-        int lengthOfRes = 0;
-        Set&lt;Character&gt; set = new HashSet&lt;&gt;();
-
-        int length = s.length();
-        for (int i = 0; i &lt; length; i++) {
-            set.add(s.charAt(i));
-            int j = i + 1;
-            while (j &lt; s.length() &amp;&amp; !set.contains(s.charAt(j))) {
-                set.add(s.charAt(j));
-                if (j - i &gt; lengthOfRes) {
-                    lengthOfRes = j - i;
-                }
-                j++;
-            }
-            set.clear();
-        }
-        return lengthOfRes + 1;
-    }
-</code></pre>
-<p>结果实际上很不理想, 时间复杂度处于后1/3, 内存占用更没法看了。内存占用这点实际上是在预期之内的</p>
-<blockquote>
-<p>Runtime: 61 ms, faster than 22.26% of Java online submissions for Longest Substring Without Repeating Characters.<br>
-Memory Usage: 39.3 MB, less than 20.73% of Java online submissions for Longest Substring Without Repeating Characters.</p>
-</blockquote>
-<p>反思下这个算法性能浪费在哪里了？对于已经具备的计算结果利用率不高可能是关键问题。例如abcdeabc这个case， abcde作为一个整体是没有重复字符的，接下来遇到了字母a，我们可能只需要把“滑动窗口”向右平移就好了，而不是重置到字母b，重新计算bcde是否有重复。于是有了方案2</p>
-<ol start="2">
-<li>方案二：</li>
-</ol>
-<pre><code class="language-java">public int lengthOfLongestSubstring(String s) {
-        int length = s.length();
-        if (length &lt;= 1) {
-            return length;
-        }
-        int ans = 0;
-        Map&lt;Character, Integer&gt; window = new HashMap&lt;&gt;(length);
-        for (int i = 0, j = 0; j &lt; length; j++) {
-            char currChar = s.charAt(j);
-            if (window.containsKey(currChar)) {
-                i = Math.max(window.get(currChar)+1, i);
-            }
-            ans = Math.max(ans, j - i + 1);
-            window.put(currChar, j);
-        }
-        return ans;
-    }
-</code></pre>
-<p>这里最关键的是<code>i = Math.max(window.get(currChar), i);</code>这一句，这决定了窗口起始位置移动到哪里。<br>
-这个执行的结果大致如图：<br>
-<img src="https://smartchaos.github.io//post-images/1560395089096.png" alt="" loading="lazy">，内存占用排名在前10%</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[leetcode刷题记-002]]></title>
-        <id>https://smartchaos.github.io/leetcode-shua-ti-ji-002/</id>
-        <link href="https://smartchaos.github.io/leetcode-shua-ti-ji-002/">
-        </link>
-        <updated>2019-03-05T05:08:25.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="问题">问题</h2>
-<p><a href="https://leetcode.com/problems/add-two-numbers/">两个链表相加问题，情境类似于十进制大数加法</a></p>
-<h2 id="解决方案">解决方案</h2>
-<h3 id="原始方案">原始方案</h3>
-<p>问题难点在于边界，直接上代码</p>
-<pre><code class="language-java">public ListNode addTwoNumbers(ListNode l1, ListNode l2) {int carryFlag = 0, plusHolder;
-        ListNode res = null;
-        ListNode curPos = null;
-        while (true) {
-            plusHolder = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + carryFlag;
-            carryFlag = plusHolder / 10;
-            ListNode newNode = new ListNode(carryFlag == 0 ? plusHolder : (plusHolder - 10));
-            if (res == null) {
-                res = newNode;
-                curPos = res;
-            } else {
-                curPos.next = newNode;
-                curPos = curPos.next;
-            }
-            if (l1 != null)
-                l1 = l1.next;
-            if (l2 != null)
-                l2 = l2.next;
-            if (l1 == null &amp;&amp; l2 == null &amp;&amp; carryFlag != 1) {
-                return res;
-            }
-        }
-    }
-</code></pre>
-<p>执行结果如下：</p>
-<blockquote>
-<p>Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.<br>
-Memory Usage: 48.2 MB, less than 17.15% of Java online submissions for Add Two Numbers.</p>
-</blockquote>
-<p>从结果来看广大网友似乎更多是在节省空间复杂度上下了功夫。</p>
-<h3 id="改进思路">改进思路，</h3>
-<p>是不是可以利用L1或者L2保存结果以节省空间呢？也就是以常见的merge链表的思路去做</p>
-<pre><code class="language-java">public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int carryFlag = 0, plusHolder;
-        ListNode prevPos = l1;
-        ListNode headPos = l1;
-        while (true) {
-            plusHolder = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + carryFlag;
-            carryFlag = plusHolder / 10;
-            if (l1 == null) {
-                ListNode newNode = new ListNode(carryFlag == 0 ? plusHolder : (plusHolder - 10));
-                prevPos.next = newNode;
-                l1 = prevPos.next;
-            } else {
-                l1.val = carryFlag == 0 ? plusHolder : (plusHolder - 10);
-            }
-            prevPos = l1;
-            l1 = l1.next;
-            if (l2 != null)
-                l2 = l2.next;
-            if (l1 == null &amp;&amp; l2 == null &amp;&amp; carryFlag != 1) {
-                return headPos;
-            }
-        }
-    }
-</code></pre>
-<p>结果在执行\空间占用上面确有优化：</p>
-<blockquote>
-<p>Runtime: 19 ms, faster than 99.90% of Java online submissions for Add Two Numbers.<br>
-Memory Usage: 47.8 MB, less than 41.60% of Java online submissions for Add Two Numbers.</p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
