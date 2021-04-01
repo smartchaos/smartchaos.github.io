@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+        <meta charset="utf-8">
+        <title>供应商系统集成的思考 | 沉舟录</title>
+        <link rel="stylesheet" href="https://smartchaos.github.io//styles/main.css">
+        <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
+        <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+        <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+         <script >hljs.initHighlightingOnLoad();</script>
+
+    </head>
+    <body>
+              <header class="header mdui-m-b-5">      
+            <div class="container  ">
+                <div class="index-title animated fadeInDown mdui-text-center mdui-text-color-white mdui-m-b-2" style="animation-delay: 0.2s"><a href="https://smartchaos.github.io/">沉舟录</a></div>
+                <div class="mdui-text-color-white animated fadeInDown mdui-text-center  mdui-m-b-3" style="animation-delay: 0.4s">沉舟侧畔千帆过，病树前头万木春</div>
+           
+            <nav id="nav" class="mdui-text-center animated fadeInDown" style="animation-delay: 0.6s">
+                   
+                            <li><a href="/">首页</a>
+                                <span class="nav-style top"></span>
+                                <span class="nav-style bottom"></span>
+                                <span class="nav-style left"></span>
+                                <span class="nav-style right"></span>
+                                </li>
+                    
+                            <li><a href="/archives">归档</a>
+                                <span class="nav-style top"></span>
+                                <span class="nav-style bottom"></span>
+                                <span class="nav-style left"></span>
+                                <span class="nav-style right"></span>
+                                </li>
+                    
+                            <li><a href="/tags">标签</a>
+                                <span class="nav-style top"></span>
+                                <span class="nav-style bottom"></span>
+                                <span class="nav-style left"></span>
+                                <span class="nav-style right"></span>
+                                </li>
+                    
+                            <li><a href="/qipa">奇葩</a>
+                                <span class="nav-style top"></span>
+                                <span class="nav-style bottom"></span>
+                                <span class="nav-style left"></span>
+                                <span class="nav-style right"></span>
+                                </li>
+                    
+                            <li><a href="/links">友链</a>
+                                <span class="nav-style top"></span>
+                                <span class="nav-style bottom"></span>
+                                <span class="nav-style left"></span>
+                                <span class="nav-style right"></span>
+                                </li>
+                    
+                            <li><a href="/about">关于</a>
+                                <span class="nav-style top"></span>
+                                <span class="nav-style bottom"></span>
+                                <span class="nav-style left"></span>
+                                <span class="nav-style right"></span>
+                                </li>
+                    
+                  </nav>
+                </div>
+        </header>
+        <div class="mdui-container ">
+                <div class="mdui-row">
+                        <div class="mdui-col-md-8 mdui-col-offset-md-2 ">
+                                <article class="mdui-p-a-2 post animated fadeIn" style="animation-delay: 0.8s;animation-duration: 2s">
+                                    <div class="post-title  mdui-m-b-1">供应商系统集成的思考</div>
+                                    <div class="mdui-typo-body-2 mdui-m-b-2" datetime="2021-04-01 14:37:52">2021-04-01 / 8 min read</div>
+                                    <div class="mdui-m-b-2 mdui-typo post-neirong"><p>目前被窝供应链已经初步具备了一定的系统能力，接下来在供应商系统集成方面需要有所突破，本文探讨的就是我们为什么需要以及具体的手段是什么</p>
+<!-- more -->
+<h2 id="背景">背景</h2>
+<p>贝壳家居和家装秉承的是贝壳“更美好居住”的愿景，希望驱动行业的正循环，这个决定了我们需要与行业有更加深入的连接和集成。在供应链领域，我们兼具渠道商和终端服务者的双重角色，决定了我们将会是整个体系的**<mark>链主</mark>**，而链主要为整个供应链交付的效率和服务担负更多职责。在其他行业，例如汽车行业，头部OEM主机厂作为链主，已经证明了好的链主能够驱动整个行业水平的提升。长期来看我们担当链主，驱动行业进化、进入正循环状态我们则无旁贷。</p>
+<p>战略上需要我们需要长期合作伙伴，把我们与供应商的关系变为“重复博弈”，以获得长期的稳定供给和服务是必要的前提条件。除此之外，中长期的合作还能够把早期的技术接入成本摊薄，充分发挥产品技术的规模效应。当然结合行业经验来看，和供应商绑定过深导致难以替换，也是公司供应商战略上面需要做好平衡的内容。</p>
+<p>解答完为什么之后，我们还需要的工作是以我们为中心视角，对行业的情况做一个简单的梳理。首先需要梳理的就是供应商系统集成的层次划分以及我们对供应商如何分类。</p>
+<h2 id="供应商集成级别">供应商集成级别</h2>
+<p>从供应链集成的深度和广度来看，集成可分成四个级别：<a href="https://wiki.mbalib.com/wiki/%E4%BF%A1%E6%81%AF%E9%9B%86%E6%88%90">信息集成</a>、同步计划，协同的<a href="https://wiki.mbalib.com/wiki/%E5%B7%A5%E4%BD%9C%E6%B5%81">工作流</a>、全面的供应链集成。</p>
+<table>
+<thead>
+<tr>
+<th>集成级别</th>
+<th>目的</th>
+<th>效益</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>信息集成</td>
+<td>信息共享和透明，供应链成员能直接实时的获取数据。</td>
+<td><a href="https://wiki.mbalib.com/wiki/%E5%BF%AB%E9%80%9F%E5%8F%8D%E5%BA%94">快速反应</a>。 问题的及时发现。 减少信息的“<a href="https://wiki.mbalib.com/wiki/%E7%89%9B%E9%9E%AD%E6%95%88%E5%BA%94">牛鞭效应</a>”。</td>
+</tr>
+<tr>
+<td>同步计划</td>
+<td>同步进行供应链的预测和计划。</td>
+<td>降低成本。 优化能力使用。 提高服务水平。</td>
+</tr>
+<tr>
+<td>协同工作流</td>
+<td>协同的生产计划、制造、采购、定单处理，协同的产品工程设计和改造。</td>
+<td>更快速的市场反应和服务水平。 高效准确、自动化的商业流程。</td>
+</tr>
+<tr>
+<td>全面的供应链集成</td>
+<td>建立虚拟的企业组织，以实现全新的商业模式。</td>
+<td>更快速高效地应对商业环境的变化，创造更多的市场机会。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>信息集成</strong>。对整个供应链集成而言，信息集成无疑是基础。供应链中所有的伙伴都有能力及时准确的获得共享信息是提高供应链性能的关键。在无中心化组织的情况下Information Hub模式是常见模式之一，但是结合我们的场景考虑，适合中心化建设。</p>
+<p><strong>同步计划</strong>。在具有了信息集成的供应链平台上，同步计划是决定每个合作伙伴应该做什么，什么时候完成，完成多少等一系列问题。由于这种计划是每个合作伙伴根据整个供应链的共享信息而制定的，因此它是准确有效的，是完全被最终用户需求所驱动的。</p>
+<p><strong>协同工作流</strong>。同步计划解决了供应链应该做什么的问题，而协同工作流则是要解决怎么做的问题。协同工作流可以包括采购、定单执行、工程更改、设计优化等业务。其结果是形成灵活、高效、可靠、低成本运作的供应链。协同工作流典型的应用一般在采购和销售领域。</p>
+<p><strong>全面的供应链集成</strong>。全面的供应链集成就好象一个大型的<a href="https://wiki.mbalib.com/wiki/%E8%99%9A%E6%8B%9F%E4%BC%81%E4%B8%9A">虚拟企业</a>组织，可以实现更高效的资源利用、更优化的供应链结构、并具备条件实现大量定制。</p>
+<h2 id="供应商分类">供应商分类</h2>
+<p>在供应商分类的模型里面，卡拉杰克模型是比较常用的模型。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2021/03/15/BPVUTxRl3p1iYbz.jpg" alt="img" loading="lazy"></figure>
+<p><strong>Leverage Materials:</strong> 杠杆项目，可选供应商多，可以带来较高利润的采购项目和品类，替换容易，例如地板类和瓷砖类。家居和家装体系内，这种供应商较多。</p>
+<p><strong>Core Competency Materials / Strategic Materials</strong>: 战略项目，对于我们产品或者生产是至关重要的，往往由于供给稀缺或者运输困难而具有较高的供应风险。</p>
+<p><strong>Commodity Materials/ Non-Critical Materials</strong>: 非关键性项目。供给丰富、采购容易、对财务影响较低的项目，标准化成熟。一般采用自动竞标的方式合作。家居和家装体系内，这种供应商较多。</p>
+<p><strong>Bottleneck Materials</strong>: 瓶颈项目。特定供应商供给、运输不便、财务影响低。卖方主动，相互依赖程度低。一般的策略是数量保险合同、供应商管理库存、确保额外库存并寻找潜在供应商。这种供应商在家装和家居行业一般来说不会太多。</p>
+<p>这个模型除了可以在我们供应商结构的规划方面给一些启发，同样地也能帮我们梳理和供应商系统集成的策略选择。</p>
+<h2 id="细分的合作战略">细分的合作战略</h2>
+<p>对应到我们家居和家装行业，对于不同象限内的供应商和供应品类采用的策略也会不同。梳理的策略如图：</p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2021/03/15/kCi2sLux41fhW63.png" alt="image-20210315185342146" loading="lazy"></figure>
+<p><strong>Leverage Materials:</strong> 建议采取的策略是通过我们的VSS做信息打通，条件成熟可以通过一些集成服务商对接，例如华耐的蚁安居，不建议逐家对接，当然我们可以支持供应商主动对接我们的开放平台，这个类型上我们可以筛选一些有意愿对接我们的供应商。</p>
+<p><strong>Core Competency Materials / Strategic Materials</strong>: 这种类型的建议策略往往是深度合作集成和长期战略合作，必要时可以通过资本方式推动协作。这种类型的系统集成策略是我们主动寻求对接，实现从信息协同、同步计划和协同工作流层面的协同。信息化能力是我们需要慎重评估的。交付链路长、服务容易出问题的品类，例如木作应该并入此类。</p>
+<p><strong>Commodity Materials/ Non-Critical Materials</strong>: 我们的系统集成策略就是，原则上通过VSS协同，允许供应商主动对接我们开放平台。</p>
+<p><strong>Bottleneck Materials</strong>:  这种类型的供应商建议采取的策略是使用VSS进行合作。</p>
+<h2 id="系统架构和基础设施">系统架构和基础设施</h2>
+<p>供应链对外对接将会有统一的基础设施，这些基础设施需要依托下列架构建设：</p>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2021/03/15/qgcBlNVPpHwdi4U.png" alt="image-20210315205150353" loading="lazy"></figure>
+<p>核心在于<strong>开放平台</strong>的建设，含<strong>供应链系统集成网关</strong>和<strong>供应商门户</strong>的建设（含开放文档），除此之外还有同VSS-SAAS化发展共同依赖的<strong>业务身份注册和识别</strong>能力。</p>
+<h2 id="建设步骤">建设步骤</h2>
+<ol>
+<li>通过对接2-3家意向供应商，落地架构基础设施，建设核心的协同数据和信息通路；</li>
+<li>以形成初步的开放能力，文档、可对接实验的环境、业务身份分配机制、安全机制；</li>
+<li>承接1-2家主动对接我们的供应商，验证开放平台能力；</li>
+<li>逐渐完善，扩展式增加对接量。</li>
+</ol>
+<h2 id="受限因素和风险">受限因素和风险</h2>
+<ul>
+<li>成本问题。合作期限较短、一段时间内预期量级较小的情况下，供应商出于成本考虑可能会意愿不足；</li>
+<li>供应商的信息化能力不足。内部信息化未完成并且不具备对外对接的条件；</li>
+<li>安全问题。由于供应商的信息化能力问题，可能会导致敏感数据通过供应商系统泄露出去；架构上面也存在传输和存储等方面的安全挑战。</li>
+<li>无统一的技术标准，技术标准异构可能会给系统集成带来挑战。不过由于我国的供应商信息化建设时间偏晚，以Web Service方案为代表的技术已经是行业主流，<em>当然这个还需要更大数据集的实证</em>。</li>
+</ul>
+<hr>
+</div>
+                                    <div class="mdui-divider mdui-m-b-2"></div>
+                                    <div class="mdui-row-xs-2 post-fenye">
+                                       
+                                        <div class="mdui-col"> </div>
+                                        
+
+                                        
+                                        <div class="mdui-col"><div class="mdui-text-right "><a href="https://smartchaos.github.io/hFtPNrysn/">自卑和自信的循环</a></div> </div>
+                                       
+                                      </div>
+                                   
+                                    <div class="mdui-divider mdui-m-t-2 mdui-m-b-2"></div>
+                                    
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '071fa5a9793482b3b5ba',
+    clientSecret: '7c2eab21958a61963e8d4400a1cb8fa4db2952f6',
+    repo: 'smartchaos.github.io',
+    owner: 'smartchaos',
+    admin: ['smartchaos'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+          
+        
+                                     <script src="https://smartchaos.github.io//media/scripts/Valine.min.js"></script>
+ <div class="comment"></div>
+
+<script>
+      new Valine({
+            el: '.comment',
+
+
+
+            path: window.location.pathname,
+            pageSize: 30,
+            avatar:'mm', 
+       })
+    </script> 
+<script>
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+           if ($(window.location.hash).length) {
+              $('html, body').animate({scrollTop: $(window.location.hash).offset().top-90}, 1000);
+              clearInterval(checkExist);
+           }
+        }, 100);
+    }
+</script>
+                                </article>
+
+                                    
+                        </div>
+                      </div>
+    
+                
+
+              </div>
+                    <footer class="footer mdui-m-t-5 mdui-text-center">
+               <nav class="social-links">
+                      <ul>
+                      
+                      
+                           
+                      	
+                        <li class="social-link"><a href="https://twitter.com/Smartychaos" target="_blank"><i class="iconfont icon-twitter"></i></a></li>
+                          
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      
+                           
+                      </ul>
+                    </nav>
+                    <div class="copyright">
+                      <p> <br/>Inspired By Theme <a href="https://github.com/shanbufun/gridea-theme-song" target="_blank"  title="宋"  >Song</a></p>
+                  </div>
+                  
+              </footer>
+    </body>
+</html>
